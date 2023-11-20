@@ -54,12 +54,12 @@ const TravelPhoto = () => {
         <Images count={4} start={1} small={false} />
       </div>
       <div className={`${s.gallery} ${s.grid_big} `} ref={gallery_2Ref}>
-        <Images count={5} start={5} small={false} />
-        <Images count={5} start={5} small={false} />
+        <Images count={5} start={5} small={true} />
+        <Images count={5} start={5} small={true} />
       </div>
       <div className={s.gallery} ref={gallery_3Ref}>
-        <Images count={4} start={9} small={false} />
-        <Images count={4} start={9} small={false} />
+        <Images count={4} start={10} small={false} />
+        <Images count={4} start={10} small={false} />
       </div>
     </section>
   );
