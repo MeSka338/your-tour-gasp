@@ -1,0 +1,54 @@
+/* SECTION 3 */
+@import "@/styles/typografy.scss";
+
+.root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding-top: 135px;
+  margin: 0 53px;
+}
+
+.reviwes__title {
+  max-width: 530px;
+}
+
+.review_wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+/* TABLET */
+@media (max-width: 1024px) {
+  .review_wrapper {
+    gap: 18px;
+  }
+}
+@media (max-width: 768px) {
+  .review_wrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/* MOBILE */
+@media (max-width: 475px) {
+  .profile {
+    padding-top: 40px;
+  }
+  .root {
+    padding-top: 75px;
+    margin: 0 21px;
+  }
+  .reviwes__title {
+    margin-bottom: 20px;
+  }
+
+  .review {
+    padding: 20px;
+
+    min-height: 408px;
+    border-radius: 20px;
+  }
+}

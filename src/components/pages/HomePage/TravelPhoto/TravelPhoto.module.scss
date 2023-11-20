@@ -1,0 +1,136 @@
+/* SECTION 4 */
+@import "@/styles/typografy.scss";
+
+.root {
+  padding-top: 135px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin: 0 20px;
+
+  overflow: hidden;
+}
+
+.travel_photos__title {
+  margin-bottom: 30px;
+
+  color: var(--Black);
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+
+  gap: 30px;
+
+  width: 200%;
+}
+
+.grid_big {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+
+  gap: 30px;
+}
+
+.gallery:not(:last-child) {
+  margin-bottom: 30px;
+}
+.photo {
+  max-width: 442.5px;
+  height: 301px;
+
+  width: 100%;
+
+  border-radius: 50px;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+.photo_small {
+  max-width: 349.16px;
+  height: 301px;
+
+  width: 100%;
+
+  border-radius: 50px;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+/* TABLET */
+
+@media (max-width: 1024px) {
+  .gallery {
+    grid-template-columns: repeat(6, 1fr);
+
+    gap: 20px;
+  }
+  .photo:nth-of-type(6),
+  .photo:nth-of-type(2) {
+    display: none;
+  }
+
+  .photo_small:nth-of-type(3),
+  .photo_small:nth-of-type(8) {
+    display: none;
+  }
+
+  .grid_big {
+    grid-template-columns: repeat(8, 1fr);
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 475px) {
+  .root {
+    padding-top: 75px;
+    margin: 0 21px;
+    width: 89%;
+  }
+  .gallery {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+  }
+  .travel_photos__title {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .travel_photos__subtitle {
+    margin-bottom: 50px;
+  }
+  .grid_big {
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+  }
+  .photo:nth-of-type(3),
+  .photo:nth-of-type(7) {
+    display: none;
+  }
+  .gallery:not(:last-child) {
+    margin-bottom: 18px;
+  }
+
+  .photo_small:nth-last-child(2),
+  .photo_small:nth-last-child(7) {
+    display: none;
+  }
+  .photo {
+    width: 100%;
+    min-height: 110px;
+    height: 100%;
+
+    border-radius: 20px;
+  }
+  .photo_small {
+    width: 100%;
+    max-height: 110px;
+    width: 100%;
+    border-radius: 20px;
+  }
+}

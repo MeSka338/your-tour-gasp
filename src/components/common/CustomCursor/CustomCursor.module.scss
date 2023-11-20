@@ -1,0 +1,12 @@
+.root {
+  width: 10px;
+  height: 10px;
+
+  border-radius: 30px;
+
+  backdrop-filter: invert(1);
+  position: fixed;
+
+  z-index: 2000;
+  pointer-events: none;
+}

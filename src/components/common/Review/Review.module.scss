@@ -1,0 +1,61 @@
+@import "@/styles/typografy.scss";
+
+.review {
+  padding: 40px;
+  max-width: 570px;
+
+  width: 100%;
+
+  background: $Beige200;
+  border-radius: 50px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  // cursor: pointer;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.review__textblock {
+  @include p_big;
+
+  color: $Black;
+  width: 99%;
+}
+
+.profile {
+  padding-top: 70px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.profile__name {
+  @include h3;
+  margin-bottom: 8px;
+  color: $Black;
+}
+
+.profile__tour {
+  @include p_small;
+  color: $Gray300;
+}
+
+/* MOBILE */
+@media (max-width: 475px) {
+  .profile {
+    padding-top: 40px;
+  }
+
+  .review {
+    padding: 20px;
+
+    min-height: 408px;
+    border-radius: 20px;
+  }
+}

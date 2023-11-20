@@ -1,0 +1,204 @@
+@import "@/styles/typografy.scss";
+
+/* FOOTER */
+.root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: $Beige100;
+  padding-top: 135px;
+
+  // position: relative;
+}
+
+.footer_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+
+  width: 100%;
+  padding: 0 20px;
+  margin-bottom: 135px;
+}
+
+.footer__img {
+  max-width: 370px;
+  max-height: 370px;
+  width: 100%;
+  height: 100%;
+
+  border-radius: 50px;
+
+  color: $Black;
+}
+
+.footer__title {
+  @include h3;
+  max-width: 371px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.footer__subtitle {
+  @include p_normal;
+  color: $Gray300;
+}
+
+.contacts_container {
+  background: $Beige200;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.footer__contacts {
+  max-width: 1168px;
+  display: flex;
+
+  justify-content: space-between;
+  margin: 0 53px;
+  align-items: center;
+
+  width: 100%;
+  height: 88px;
+}
+
+.contacts__title {
+  @include p_normal;
+  color: $Gray300;
+}
+
+.contacts__socials {
+  display: flex;
+  justify-content: center;
+}
+
+.contacts__item {
+  display: flex;
+  align-items: center;
+  color: $Black;
+  gap: 12px;
+}
+
+.socials__title {
+  @include p_normal;
+  @include link;
+
+  text-decoration: none;
+  color: $Black;
+}
+
+.footer__contacts__socials_title:hover {
+  text-decoration: underline;
+}
+
+.socials__title:active {
+  color: $Green400;
+}
+.socials {
+  display: flex;
+  gap: 35px;
+}
+
+.link {
+  color: $Black;
+}
+
+.arrow {
+  height: 70px;
+  width: 70px;
+
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(27px);
+  border-radius: 50%;
+  position: fixed;
+  bottom: 10%;
+  right: 5%;
+  &_icon {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+
+    top: 50%;
+    right: 50%;
+
+    transform: translate(50%, -30%) rotate(-135deg);
+
+    // background: white;
+    border-bottom: 4px solid white;
+    border-right: 4px solid white;
+  }
+}
+
+/* TABLET */
+
+@media (max-width: 768px) {
+  .footer_content {
+    width: 85%;
+  }
+  .footer_container {
+    flex-direction: column;
+  }
+  .footer__contacts {
+    flex-direction: column;
+  }
+  .footer__title {
+    text-align: center;
+  }
+  .footer__subtitle {
+    text-align: center;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 475px) {
+  .root {
+    padding-top: 75px;
+  }
+
+  .footer_container {
+    flex-direction: column;
+    justify-content: center;
+    width: 95%;
+    margin-bottom: 75px;
+    gap: 35px;
+  }
+
+  .footer__title {
+    text-align: center;
+  }
+  .footer__subtitle {
+    text-align: center;
+  }
+
+  .footer__contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+  }
+
+  .contacts__socials {
+    gap: 18px;
+  }
+  .socials__title {
+    height: 21px;
+  }
+  .contacts__icon {
+    transform: scale(0.77);
+  }
+  .contacts__item {
+    gap: 6.5px;
+  }
+
+  .footer__img {
+    max-width: 130px;
+
+    width: 100%;
+
+    border-radius: 20px;
+  }
+}

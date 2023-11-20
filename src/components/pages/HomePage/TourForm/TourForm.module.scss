@@ -1,0 +1,18 @@
+@import "@/styles/typografy.scss";
+
+.root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding-top: 135px;
+
+  margin: 0 53px;
+}
+
+@media (max-width: 475px) {
+  .root {
+    padding-top: 75px;
+    padding: 75px 21px 0 21px;
+  }
+}

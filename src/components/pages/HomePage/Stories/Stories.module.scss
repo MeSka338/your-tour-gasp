@@ -1,0 +1,26 @@
+@import "@/styles/typografy.scss";
+
+/* SECTION 5 */
+.root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding-top: 135px;
+
+  margin: 0 53px;
+}
+
+.stories__title {
+  margin-bottom: 30px;
+  text-align: center;
+  color: $Black;
+}
+
+@media (max-width: 475px) {
+  .root {
+    padding-top: 75px;
+    margin: 0 21px;
+  }
+}

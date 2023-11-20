@@ -1,0 +1,366 @@
+@import "@/styles/typografy.scss";
+
+.tour_form__form {
+  max-width: 1170px;
+
+  width: 100%;
+
+  background: $White;
+
+  border-radius: 50px;
+}
+
+.form_container {
+  padding: 70px;
+}
+
+.form_element {
+  position: relative;
+}
+
+.form_grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 30px;
+  row-gap: 33px;
+}
+
+.form_element__title {
+  @include p_normal;
+  margin-bottom: 8px;
+}
+
+.form_element > img {
+  position: absolute;
+  top: 65%;
+  right: 22px;
+
+  pointer-events: none;
+}
+
+.form_element__input {
+  @include p_normal;
+  max-width: 768px;
+  max-height: 68px;
+
+  width: 100%;
+
+  padding: 20px;
+  border-radius: 10px;
+  border: $Beige200 solid 1px;
+  background: $Beige100;
+
+  outline: none;
+
+  cursor: pointer;
+}
+.select {
+  appearance: none;
+}
+.select:invalid {
+  color: $Gray300;
+}
+
+.select > option {
+  background: $White;
+  color: black;
+}
+
+.form_element__input:hover {
+  background: $Beige200;
+}
+
+.form_element__input:focus {
+  border: $Gray300 solid 1px;
+}
+
+.comment {
+  resize: none;
+
+  max-width: 1030px;
+  max-height: 152px !important;
+
+  width: 100%;
+  height: 152px;
+
+  cursor: text;
+}
+
+.comment_title {
+  margin-top: 33px;
+}
+
+.age_check {
+  margin-top: 30px;
+}
+
+.age_check__title {
+  margin-bottom: 9px;
+}
+
+.radio {
+  display: none;
+}
+
+.fake_radio_container {
+  display: inline-flex;
+}
+
+.radio_label {
+  @include p_normal;
+  height: 28px;
+
+  position: relative;
+
+  margin-right: 27px;
+  cursor: pointer;
+}
+
+.fake_radio_container .fake_radio {
+  width: 26px;
+  height: 26px;
+  border: 2px solid $Black;
+  border-radius: 50%;
+  margin-right: 11px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  cursor: pointer;
+}
+
+.fake_radio_container > .fake_radio:after {
+  content: "";
+
+  width: 12px;
+  height: 12px;
+
+  background: $Black;
+
+  border-radius: 50%;
+
+  opacity: 0;
+}
+.radio:checked + .fake_radio_container > .fake_radio:after {
+  opacity: 1;
+}
+.input[type="date"] {
+  color: $Gray300;
+  text-transform: uppercase;
+}
+
+.input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+}
+.input::placeholder {
+  color: $Gray300;
+}
+
+.license_agreemt {
+  margin-top: 30px;
+
+  display: flex;
+}
+
+.checkbox_title {
+  @include p_small;
+  color: $Gray300;
+}
+.checkbox_label {
+  min-width: 26px;
+  height: 26px;
+
+  border: 2px solid $Black;
+
+  border-radius: 5px;
+
+  margin-right: 19px;
+  position: relative;
+
+  cursor: pointer;
+}
+
+.checkbox_label:after {
+  content: "";
+  position: absolute;
+  border-bottom: 2px solid $Black;
+  border-left: 2px solid $Black;
+
+  top: 50%;
+  right: 50%;
+
+  transform: translate(50%, -70%) rotate(-45deg);
+  height: 7.12px;
+  width: 12.24px;
+  opacity: 0;
+}
+
+.checkbox {
+  display: none;
+}
+
+.checkbox:checked + .checkbox_label:after {
+  opacity: 1;
+}
+
+.license {
+  text-decoration: none;
+
+  color: $Black;
+}
+.license:hover {
+  border-bottom: 1px solid $Black;
+}
+
+.buttons {
+  margin-top: 32px;
+  display: flex;
+
+  gap: 30px;
+}
+
+.form_btn {
+  @include p_normal;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  width: 235px;
+  height: 58px;
+
+  border-radius: 10px;
+
+  background: $Green400;
+  color: $White;
+  border: none;
+
+  cursor: pointer;
+}
+.submit {
+  background: $Green400;
+  color: $White;
+}
+.submit:hover {
+  background: $Green300;
+}
+
+.submit:active {
+  background: $Green200;
+}
+
+.reset {
+  background: $Green100;
+
+  color: $Green400;
+}
+
+.reset:hover {
+  background: $Gray100;
+}
+
+.reset:active {
+  background: $Gray200;
+}
+.link {
+  color: $Black;
+}
+/* TABLET */
+
+@media (max-width: 768px) {
+  .form_grid {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
+  }
+}
+@media (max-width: 1024px) {
+  .form_container {
+    padding: 60px;
+  }
+  .tour_form {
+    padding-right: 53px;
+    padding-left: 53px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 475px) {
+  .tour_form__subtitle {
+    margin-bottom: 40px !important;
+  }
+  .tour_form__form {
+    border-radius: 30px;
+  }
+
+  .form_container {
+    padding: 20px;
+    padding-bottom: 40px;
+  }
+
+  .form_element > img {
+    top: 64%;
+    right: 13.59px;
+
+    width: 18.82px;
+  }
+
+  .form_element__input {
+    max-height: 43px;
+    padding: 10px;
+  }
+
+  .comment {
+    min-height: 132px;
+    height: 100%;
+  }
+
+  .fake_radio-container .fake_radio {
+    min-width: 20px;
+    min-height: 20px;
+
+    width: 100%;
+    height: 100%;
+  }
+
+  .fake_radio_container > .fake_radio:after {
+    content: "";
+
+    width: 10px;
+    height: 10px;
+  }
+
+  .checkbox_label {
+    min-width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+  .checkbox_label:after {
+    height: 5.48px;
+    width: 9.42px;
+  }
+
+  .buttons {
+    margin-top: 30px;
+    gap: 10px;
+  }
+
+  .submit {
+    padding: 12px;
+    max-width: 134px;
+    width: 100%;
+    height: 47px;
+
+    border-radius: 10px;
+  }
+
+  .reset {
+    padding: 12px;
+    max-width: 134px;
+    width: 100%;
+    height: 47px;
+  }
+}

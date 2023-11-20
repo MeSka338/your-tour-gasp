@@ -1,0 +1,74 @@
+@import "@/styles/typografy.scss";
+
+.root {
+  height: 831px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: url("/header/header-img.jpg");
+  background-size: cover;
+  background-position: center;
+
+  color: $White;
+}
+.hero {
+  position: absolute;
+  margin-top: 207px;
+
+  display: flex;
+  flex-direction: column;
+
+  text-align: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.hero__title {
+  h1 {
+    @include h1;
+  }
+  max-width: 768px;
+  max-height: 315px;
+
+  width: 100%;
+  height: 100%;
+}
+
+.hero__subtitle {
+  @include p_normal;
+
+  text-align: center;
+
+  max-width: 562px;
+
+  width: 100%;
+  height: 100%;
+}
+
+/* TABLET */
+
+@media (max-width: 1024px) {
+  .hero__subtitle {
+    max-width: 442px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 475px) {
+  .root {
+    height: 488px;
+  }
+
+  .hero {
+    margin-top: 140px;
+    gap: 40px;
+  }
+
+  .hero__title {
+    width: 60%;
+  }
+
+  .hero__subtitle {
+    width: 75%;
+  }
+}
