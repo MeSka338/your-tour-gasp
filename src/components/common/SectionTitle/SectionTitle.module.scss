@@ -1,0 +1,20 @@
+@import "@/styles/typografy.scss";
+
+.root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stories__title {
+  @include h2;
+  @include title;
+
+  margin-bottom: 30px;
+  text-align: center;
+  color: $Black;
+}
+.stories__subtitle {
+  @include p_normal;
+  @include subtitle;
+}

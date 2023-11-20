@@ -1,0 +1,124 @@
+@import "@/styles/typografy.scss";
+
+.root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 135px;
+  margin: 0 53px;
+}
+
+.select_tour__title {
+  @include h2;
+  @include title;
+
+  margin-bottom: 35px !important;
+}
+
+.select_tour__menu {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  // padding-bottom: 106px;
+  margin-bottom: 106px;
+}
+.select_tour_menu__item > a {
+  @include p_big;
+  color: $Black;
+
+  cursor: pointer;
+}
+
+.active {
+  text-decoration: underline;
+  text-underline-offset: 10px;
+  text-decoration-thickness: 2px;
+  color: $Orange200 !important;
+}
+.select_tour_menu__link:hover {
+  text-underline-offset: 10px;
+  text-decoration-thickness: 2px;
+}
+.select_tour__options {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+
+  max-width: 1170px;
+}
+
+/* TABLET */
+@media (max-width: 1024px) {
+  .select_tour__options {
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+  .card {
+    min-width: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .select_tour__options {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 475px) {
+  .root {
+    padding-top: 75px;
+    margin: 0 21px;
+  }
+
+  .select_tour__title {
+    margin-bottom: 30px !important;
+  }
+
+  .select_tour__menu {
+    padding: 0;
+    justify-content: center;
+    gap: 10px;
+  }
+  .active > a {
+    text-underline-offset: 4px;
+  }
+  .select_tour_menu__link:hover {
+    text-underline-offset: 4px;
+    text-decoration-thickness: 2px;
+  }
+  .select_tour__options {
+    margin-top: 50px;
+  }
+  .card:hover .secondary_btn {
+    background: transparent;
+  }
+  .card_container {
+    border-radius: 20px;
+  }
+
+  .card {
+    min-width: 318px;
+    width: 100%;
+    height: 318px;
+  }
+  .titles_container {
+    padding-left: 25px;
+    padding-top: 25px;
+  }
+  .card__title {
+    width: 100%;
+    margin-bottom: 13px;
+  }
+
+  .secondary_btn {
+    padding: 0;
+    left: 25px;
+    bottom: 26.5px;
+  }
+}

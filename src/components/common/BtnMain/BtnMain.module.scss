@@ -1,0 +1,27 @@
+@import "@/styles/typografy.scss";
+
+.root {
+  @include p_small;
+  width: 118px;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: $Black;
+  background: $White;
+  border-radius: 10px;
+}
+
+.root:hover {
+  text-decoration: none;
+  background: $Orange200;
+
+  color: $White;
+}
+
+.root:active {
+  background: $Orange100;
+  color: $Black;
+}
