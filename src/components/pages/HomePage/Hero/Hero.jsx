@@ -84,9 +84,9 @@ const Hero = () => {
             </div>
           </div>
           <div
-            style={{ overflow: "hidden" }}
             data-scroll
             data-scroll-speed="0.15"
+            className={s.hero__subtitle_wrapper}
           >
             <p className={s.hero__subtitle} ref={subtitleRef}>
               Идейные соображения высшего порядка, a также рамки и место
