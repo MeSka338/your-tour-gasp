@@ -6,13 +6,31 @@
   align-items: center;
 
   padding-top: 135px;
+  padding: 75px 21px 0 21px;
 
-  margin: 0 53px;
+  // margin: 0 53px;
+}
+
+// @media (max-width: 475px) {
+//   .root {
+//     padding-top: 75px;
+//     padding: 75px 21px 0 21px;
+//     margin: 0;
+//   }
+// }
+
+@media (max-width: 1024px) {
+  .root {
+    padding-top: 75px;
+    padding: 75px 53px 0 53px;
+    margin: 0;
+  }
 }
 
 @media (max-width: 475px) {
   .root {
     padding-top: 75px;
     padding: 75px 21px 0 21px;
+    margin: 0;
   }
 }
