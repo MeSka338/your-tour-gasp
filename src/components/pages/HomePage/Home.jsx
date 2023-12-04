@@ -43,6 +43,10 @@ const Home = ({
   ListAnimation,
   cardsRef,
   CardsRef,
+  // TourForm
+
+  form,
+  formAnimation,
 }) => {
   return (
     <>
@@ -76,7 +80,12 @@ const Home = ({
           CardsRef={CardsRef}
           cardsRef={cardsRef}
         />
-        <TourForm />
+        <TourForm
+          titleRef={titleRef}
+          TitleAnimation={TitleAnimation}
+          form={form}
+          formAnimation={formAnimation}
+        />
         <Reviews
           textRef={textRef}
           click={click}

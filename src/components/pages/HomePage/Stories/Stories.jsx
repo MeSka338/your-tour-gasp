@@ -5,12 +5,12 @@ import SectionTitle from "@/src/components/common/SectionTitle/SectionTitle";
 const Stories = () => {
   return (
     <section className={s.root}>
-      <SectionTitle
+      {/* <SectionTitle
         title={"Истории путешествий"}
         subtitle={
           " Идейные соображения высшего порядка, а также рамки и место обучениякадров"
         }
-      />
+      /> */}
 
       <CardBig
         img="/stories/story photo-1.jpg"

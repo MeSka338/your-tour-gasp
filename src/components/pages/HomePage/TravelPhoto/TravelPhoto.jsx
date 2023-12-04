@@ -43,12 +43,12 @@ const TravelPhoto = () => {
 
   return (
     <section className={s.root}>
-      <SectionTitle
+      {/* <SectionTitle
         title={"Фотографии путешествий"}
         subtitle={
           "Идейные соображения высшего порядка, а также рамки и место обучения кадров"
         }
-      />
+      /> */}
       <div className={s.gallery} ref={gallery_1Ref}>
         <Images count={4} start={1} small={false} />
         <Images count={4} start={1} small={false} />

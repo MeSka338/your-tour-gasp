@@ -228,6 +228,26 @@ const HomeContainer = () => {
       }
     );
   };
+  //   TourForm
+  //// Form
+  const form = useRef();
+
+  const formAnimation = () => {
+    gsap.fromTo(
+      form.current,
+      {
+        opacity: 0,
+      },
+      {
+        scrollTrigger: {
+          trigger: form.current,
+
+          start: "top center",
+        },
+        opacity: 1,
+      }
+    );
+  };
 
   return (
     <Home
@@ -265,6 +285,9 @@ const HomeContainer = () => {
       ListAnimation={ListAnimation}
       cardsRef={cardsRef}
       CardsRef={CardsRef}
+      //   TourForm
+      form={form}
+      formAnimation={formAnimation}
     />
   );
 };

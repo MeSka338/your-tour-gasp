@@ -5,26 +5,7 @@ import s from "./Form.module.scss";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Form = () => {
-  const form = useRef();
-
-  const formAnimation = () => {
-    gsap.fromTo(
-      form.current,
-      {
-        opacity: 0,
-      },
-      {
-        scrollTrigger: {
-          trigger: form.current,
-
-          start: "top center",
-        },
-        opacity: 1,
-      }
-    );
-  };
-
+const Form = ({ form, formAnimation }) => {
   useEffect(() => {
     formAnimation();
   }, []);
