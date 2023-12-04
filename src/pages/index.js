@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import HomeContainer from "../components/pages/HomePage/HomeContainer";
-import Layout from "../components/common/Layout";
 
 export default function HomePage() {
   useEffect(() => {
@@ -11,11 +10,9 @@ export default function HomePage() {
   }, []);
   return (
     <>
-      <Layout>
-        <main>
-          <HomeContainer />
-        </main>
-      </Layout>
+      <main>
+        <HomeContainer />
+      </main>
     </>
   );
 }
