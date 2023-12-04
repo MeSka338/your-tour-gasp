@@ -31,17 +31,14 @@ const HomeContainer = () => {
 
   const scaleAnimation = () => {
     const targets = gsap.utils.toArray("a");
-
     scaleAnim.to(rootRef.current, {
       scale: 7,
       duration: 0.2,
     });
-
     targets.forEach((target) => {
       target.addEventListener("mouseenter", (e) => {
         scaleAnim.play();
       });
-
       target.addEventListener("mouseleave", (e) => {
         scaleAnim.reverse();
       });
