@@ -47,6 +47,12 @@ const Home = ({
 
   form,
   formAnimation,
+  // TourPhoto
+  gallery_1Ref,
+  gallery_2Ref,
+  gallery_3Ref,
+  setIsTablet,
+  GalleryAnimation,
 }) => {
   return (
     <>
@@ -100,7 +106,13 @@ const Home = ({
           modalRef={modalRef}
           ModalAnimation={ModalAnimation}
         />
-        <TravelPhoto />
+        <TravelPhoto
+          gallery_1Ref={gallery_1Ref}
+          gallery_2Ref={gallery_2Ref}
+          gallery_3Ref={gallery_3Ref}
+          setIsTablet={setIsTablet}
+          GalleryAnimation={GalleryAnimation}
+        />
         <Stories />
       </div>
     </>

@@ -4,32 +4,38 @@ import s from "./TravelPhoto.module.scss";
 import SectionTitle from "@/src/components/common/SectionTitle";
 import gsap from "gsap";
 
-const TravelPhoto = () => {
-  const gallery_1Ref = useRef();
-  const gallery_2Ref = useRef();
-  const gallery_3Ref = useRef();
+const TravelPhoto = ({
+  gallery_1Ref,
+  gallery_2Ref,
+  gallery_3Ref,
+  setIsTablet,
+  GalleryAnimation,
+}) => {
+  // const gallery_1Ref = useRef();
+  // const gallery_2Ref = useRef();
+  // const gallery_3Ref = useRef();
 
-  const [istablet, setIsTablet] = useState(false);
+  // const [istablet, setIsTablet] = useState(false);
 
-  const margin = istablet ? 4 : 7;
-  const duration = 30;
+  // const margin = istablet ? 4 : 7;
+  // const duration = 30;
 
-  const GalleryAnimation = (gallery_Ref, toLeft) => {
-    let refWidth = gallery_Ref.current.clientWidth;
+  // const GalleryAnimation = (gallery_Ref, toLeft) => {
+  //   let refWidth = gallery_Ref.current.clientWidth;
 
-    gsap.fromTo(
-      gallery_Ref.current,
-      {
-        x: toLeft ? refWidth / 4 + margin : -refWidth / 4 - margin,
-      },
-      {
-        duration: duration,
-        x: toLeft ? -refWidth / 4 - margin : refWidth / 4 + margin,
-        repeat: -1,
-        ease: "none",
-      }
-    );
-  };
+  //   gsap.fromTo(
+  //     gallery_Ref.current,
+  //     {
+  //       x: toLeft ? refWidth / 4 + margin : -refWidth / 4 - margin,
+  //     },
+  //     {
+  //       duration: duration,
+  //       x: toLeft ? -refWidth / 4 - margin : refWidth / 4 + margin,
+  //       repeat: -1,
+  //       ease: "none",
+  //     }
+  //   );
+  // };
 
   useEffect(() => {
     GalleryAnimation(gallery_1Ref, true);
