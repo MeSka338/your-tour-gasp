@@ -83,6 +83,72 @@ const HomeContainer = () => {
       setIsFixed(false);
     }
   };
+  // sectionTitle
+  const titleRef = useRef();
+
+  const TitleAnimation = () => {
+    gsap.fromTo(
+      titleRef.current,
+      {
+        clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)",
+      },
+      {
+        scrollTrigger: titleRef.current,
+
+        clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+        duration: 1,
+        ease: "power1.out",
+      }
+    );
+  };
+
+  //   Review
+  const textRef = useRef();
+  const [click, setClick] = useState(false);
+  const [isModal, setIsModal] = useState(false);
+
+  const ReviewAnimation = () => {
+    setClick(!click);
+    if (click === true) {
+      gsap.to(
+        textRef.current,
+
+        {
+          position: "absolute",
+
+          zIndex: 10000,
+        }
+      );
+    } else {
+      gsap.to(
+        textRef.current,
+
+        {
+          position: "auto",
+          // zIndex: 10000,
+        }
+      );
+    }
+  };
+  //   modalAnimation
+  const modalRef = useRef();
+
+  const ModalAnimation = () => {
+    gsap.fromTo(
+      modalRef.current,
+      {
+        scale: 0,
+        rotate: "-90deg",
+      },
+      {
+        duration: 1,
+        scale: 1,
+        rotate: "0",
+        width: "auto",
+        height: "auto",
+      }
+    );
+  };
 
   return (
     <Home
@@ -98,6 +164,19 @@ const HomeContainer = () => {
       navRef={navRef}
       navAnimation={navAnimation}
       updateScroll={updateScroll}
+      //   review
+      textRef={textRef}
+      click={click}
+      setClick={setClick}
+      isModal={isModal}
+      setIsModal={setIsModal}
+      ReviewAnimation={ReviewAnimation}
+      // sectionTitle
+      titleRef={titleRef}
+      TitleAnimation={TitleAnimation}
+      //   modalAnimation
+      modalRef={modalRef}
+      ModalAnimation={ModalAnimation}
     />
   );
 };

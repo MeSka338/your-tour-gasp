@@ -4,34 +4,21 @@ import Link from "next/link";
 import s from "./Review.module.scss";
 import gsap from "gsap";
 
-const Review = ({ text, name, tourType, profileImg }) => {
-  const textRef = useRef();
-  const [click, setClick] = useState(false);
-  const [isModal, setIsModal] = useState(false);
-
-  const ReviewAnimation = () => {
-    setClick(!click);
-    if (click === true) {
-      gsap.to(
-        textRef.current,
-
-        {
-          position: "absolute",
-
-          zIndex: 10000,
-        }
-      );
-    } else {
-      gsap.to(
-        textRef.current,
-
-        {
-          position: "auto",
-          // zIndex: 10000,
-        }
-      );
-    }
-  };
+const Review = ({
+  text,
+  name,
+  tourType,
+  profileImg,
+  textRef,
+  click,
+  setClick,
+  isModal,
+  setIsModal,
+  ReviewAnimation,
+  // modalReview
+  modalRef,
+  ModalAnimation,
+}) => {
   useEffect(() => {
     if (isModal) {
       document.body.style.overflow = "hidden";
@@ -50,6 +37,8 @@ const Review = ({ text, name, tourType, profileImg }) => {
           profileImg={profileImg}
           setIsModal={setIsModal}
           reviewRef={textRef}
+          modalRef={modalRef}
+          ModalAnimation={ModalAnimation}
         />
       )}
       <Link

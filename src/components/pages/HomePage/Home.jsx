@@ -21,6 +21,19 @@ const Home = ({
   navRef,
   navAnimation,
   updateScroll,
+  // review
+  textRef,
+  click,
+  setClick,
+  isModal,
+  setIsModal,
+  ReviewAnimation,
+  // sectionsTitle
+  titleRef,
+  TitleAnimation,
+  // modalAnimation
+  ModalAnimation,
+  modalRef,
 }) => {
   return (
     <>
@@ -46,7 +59,20 @@ const Home = ({
         />
         <SelectTour />
         <TourForm />
-        <Reviews />
+        <Reviews
+          textRef={textRef}
+          click={click}
+          setClick={setClick}
+          isModal={isModal}
+          setIsModal={setIsModal}
+          ReviewAnimation={ReviewAnimation}
+          // sectionsTitle
+          titleRef={titleRef}
+          TitleAnimation={TitleAnimation}
+          // modalAnimation
+          modalRef={modalRef}
+          ModalAnimation={ModalAnimation}
+        />
         <TravelPhoto />
         <Stories />
       </div>

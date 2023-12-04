@@ -2,7 +2,22 @@ import React from "react";
 import s from "./Reviews.module.scss";
 import SectionTitle from "@/src/components/common/SectionTitle";
 import Review from "@/src/components/common/Review";
-const Reviews = () => {
+const Reviews = ({
+  // review
+  textRef,
+  click,
+  setClick,
+  isModal,
+  setIsModal,
+  ReviewAnimation,
+
+  // seactiontitle
+  titleRef,
+  TitleAnimation,
+  // modalAnimfaion
+  ModalAnimation,
+  modalRef,
+}) => {
   return (
     <section className={s.root} id="review">
       <div className={s.reviwes__title}>
@@ -11,6 +26,8 @@ const Reviews = () => {
           subtitle={
             "Идейные соображения высшего порядка, а также рамки и место обучения кадров"
           }
+          titleRef={titleRef}
+          TitleAnimation={TitleAnimation}
         />
       </div>
 
@@ -22,6 +39,15 @@ const Reviews = () => {
           name={"Мария"}
           tourType={"Вдали от дома"}
           profileImg={"/reviews/mari.png"}
+          textRef={textRef}
+          click={click}
+          setClick={setClick}
+          isModal={isModal}
+          setIsModal={setIsModal}
+          ReviewAnimation={ReviewAnimation}
+          // modalReview
+          modalRef={modalRef}
+          ModalAnimation={ModalAnimation}
         />
 
         <Review
@@ -31,6 +57,15 @@ const Reviews = () => {
           name={"Павел"}
           tourType={"Путешествие в горы"}
           profileImg={"/reviews/pavel.png"}
+          textRef={textRef}
+          click={click}
+          setClick={setClick}
+          isModal={isModal}
+          setIsModal={setIsModal}
+          ReviewAnimation={ReviewAnimation}
+          // modalReview
+          modalRef={modalRef}
+          ModalAnimation={ModalAnimation}
         />
       </div>
     </section>

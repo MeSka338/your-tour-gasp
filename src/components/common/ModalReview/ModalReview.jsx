@@ -8,30 +8,27 @@ const ModalReview = ({
   tourType,
   setIsModal,
   reviewRef,
+  modalRef,
+  ModalAnimation,
 }) => {
-  const modalRef = useRef();
+  // const modalRef = useRef();
 
-  // console.log(reviewRef.current.offsetTop);
-  // console.log(reviewRef.current.offsetLeft);
-  // console.log(reviewRef.current.clientWidth);
-  // console.log(reviewRef.current.clientHeight);
-
-  const ModalAnimation = () => {
-    gsap.fromTo(
-      modalRef.current,
-      {
-        scale: 0,
-        rotate: "-90deg",
-      },
-      {
-        duration: 1,
-        scale: 1,
-        rotate: "0",
-        width: "auto",
-        height: "auto",
-      }
-    );
-  };
+  // const ModalAnimation = () => {
+  //   gsap.fromTo(
+  //     modalRef.current,
+  //     {
+  //       scale: 0,
+  //       rotate: "-90deg",
+  //     },
+  //     {
+  //       duration: 1,
+  //       scale: 1,
+  //       rotate: "0",
+  //       width: "auto",
+  //       height: "auto",
+  //     }
+  //   );
+  // };
   useEffect(() => {
     ModalAnimation();
   }, []);
