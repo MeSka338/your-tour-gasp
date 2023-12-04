@@ -8,7 +8,20 @@ import TravelPhoto from "./TravelPhoto";
 import Stories from "./Stories";
 import Head from "next/head";
 
-const Home = () => {
+const Home = ({
+  // hero
+  heraderRef,
+  subtitleRef,
+  buttonRef,
+  headerAnimation,
+  buttonAnimation,
+  subtitleAnimation,
+  // header
+  isFixed,
+  navRef,
+  navAnimation,
+  updateScroll,
+}) => {
   return (
     <>
       <Head>
@@ -18,7 +31,19 @@ const Home = () => {
         <link rel="icon" href="/YT-main-icon.svg" />
       </Head>
       <div className={s.root}>
-        <Hero />
+        <Hero
+          heraderRef={heraderRef}
+          subtitleRef={subtitleRef}
+          buttonRef={buttonRef}
+          headerAnimation={headerAnimation}
+          buttonAnimation={buttonAnimation}
+          subtitleAnimation={subtitleAnimation}
+          // header
+          isFixed={isFixed}
+          navRef={navRef}
+          navAnimation={navAnimation}
+          updateScroll={updateScroll}
+        />
         <SelectTour />
         <TourForm />
         <Reviews />

@@ -2,43 +2,12 @@ import React, { useState, useEffect, useRef } from "react";
 import s from "./Header.module.scss";
 import gsap from "gsap";
 
-const Header = () => {
-  const [isFixed, setIsFixed] = useState(false);
-  const navRef = useRef();
-  let tl = gsap.timeline();
-  const navAnimation = () => {
-    gsap.fromTo(
-      navRef.current.children,
-      {
-        opacity: 0,
-        x: -100,
-      },
-      {
-        x: 0,
-        ease: "power1.easeOut",
-        opacity: 1,
-        stagger: {
-          each: 0.4,
-          from: "start",
-        },
-
-        duration: 1,
-      }
-    );
-  };
-
+const Header = ({ isFixed, navRef, navAnimation, updateScroll }) => {
   useEffect(() => {
-    window.addEventListener("scroll", updateScroll);
     navAnimation();
+    window.addEventListener("scroll", updateScroll);
   }, []);
 
-  const updateScroll = () => {
-    if (window.scrollY >= 450) {
-      setIsFixed(true);
-    } else {
-      setIsFixed(false);
-    }
-  };
   return (
     <header className={s.root}>
       <div
