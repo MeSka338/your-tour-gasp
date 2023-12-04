@@ -1,7 +1,10 @@
 import React, { useRef, useState } from "react";
 import gsap from "gsap";
+import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import Home from "./Home";
 const HomeContainer = () => {
+  gsap.registerPlugin(ScrollTrigger);
+
   const heraderRef = useRef();
   const subtitleRef = useRef();
   const buttonRef = useRef();
@@ -103,6 +106,7 @@ const HomeContainer = () => {
   };
 
   //   Review
+
   const textRef = useRef();
   const [click, setClick] = useState(false);
   const [isModal, setIsModal] = useState(false);
@@ -150,6 +154,81 @@ const HomeContainer = () => {
     );
   };
 
+  // SelectTOur
+  const [menuArr, setMenuArr] = useState([
+    { title: "Популярные", isSelect: true },
+    { title: "Авторские", isSelect: false },
+    { title: "Походы", isSelect: false },
+    { title: "Сплавы", isSelect: false },
+    { title: "Велопрогулки", isSelect: false },
+  ]);
+  const TourTitleRef = useRef();
+  const listRef = useRef();
+  const cardsRef = useRef();
+
+  const Change = (key) => {
+    let arr = [...menuArr];
+    arr.forEach((item) => {
+      item.isSelect = false;
+    });
+    arr[key].isSelect = true;
+
+    setMenuArr(arr);
+  };
+
+  const TourTitleAnimation = () => {
+    gsap.fromTo(
+      TourTitleRef.current,
+      {
+        clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)",
+      },
+      {
+        scrollTrigger: listRef.current,
+
+        clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+        duration: 1,
+        ease: "power1.out",
+      }
+    );
+  };
+
+  const ListAnimation = () => {
+    gsap.fromTo(
+      listRef.current.children,
+      {
+        y: 100,
+      },
+      {
+        scrollTrigger: listRef.current,
+        y: 0,
+        stagger: {
+          each: 0.2,
+          // ease: "power1.out",
+        },
+      }
+    );
+  };
+
+  const CardsRef = () => {
+    gsap.fromTo(
+      cardsRef.current.children,
+      {
+        scale: 0,
+      },
+      {
+        scrollTrigger: {
+          trigger: cardsRef.current,
+          start: "top center",
+        },
+        scale: 1,
+        stagger: {
+          each: 0.1,
+          ease: "power1.out",
+        },
+      }
+    );
+  };
+
   return (
     <Home
       // hero
@@ -177,6 +256,15 @@ const HomeContainer = () => {
       //   modalAnimation
       modalRef={modalRef}
       ModalAnimation={ModalAnimation}
+      //  SelectTour
+      menuArr={menuArr}
+      TourTitleRef={TourTitleRef}
+      listRef={listRef}
+      Change={Change}
+      TourTitleAnimation={TourTitleAnimation}
+      ListAnimation={ListAnimation}
+      cardsRef={cardsRef}
+      CardsRef={CardsRef}
     />
   );
 };

@@ -34,6 +34,15 @@ const Home = ({
   // modalAnimation
   ModalAnimation,
   modalRef,
+  // SelectTour
+  menuArr,
+  TourTitleRef,
+  listRef,
+  Change,
+  TourTitleAnimation,
+  ListAnimation,
+  cardsRef,
+  CardsRef,
 }) => {
   return (
     <>
@@ -57,7 +66,16 @@ const Home = ({
           navAnimation={navAnimation}
           updateScroll={updateScroll}
         />
-        <SelectTour />
+        <SelectTour
+          menuArr={menuArr}
+          TourTitleRef={TourTitleRef}
+          listRef={listRef}
+          Change={Change}
+          TourTitleAnimation={TourTitleAnimation}
+          ListAnimation={ListAnimation}
+          CardsRef={CardsRef}
+          cardsRef={cardsRef}
+        />
         <TourForm />
         <Reviews
           textRef={textRef}
