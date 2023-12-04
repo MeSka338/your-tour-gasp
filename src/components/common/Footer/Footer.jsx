@@ -6,44 +6,9 @@ import s from "./Footer.module.scss";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Footer = () => {
-  const footerRef = useRef();
-  const arrowRef = useRef();
-
-  const arrowAnimtion = () => {
-    gsap.fromTo(
-      arrowRef.current,
-      {
-        x: 200,
-      },
-      {
-        scrollTrigger: {
-          trigger: footerRef.current,
-          toggleActions: "play none reverse none ",
-          start: "top bottom",
-
-          end: "top bottom",
-        },
-        x: 0,
-      }
-    );
-  };
-
-  const arrowAnimtionOut = () => {
-    gsap.to(arrowRef.current, {
-      scrollTrigger: {
-        trigger: footerRef.current,
-        start: "top 20%",
-
-        markers: true,
-      },
-      opacity: 0,
-      // x: 0,
-    });
-  };
+const Footer = ({ footerRef, arrowRef, arrowAnimtion }) => {
+ 
   useEffect(() => {
-    // first;
-    // arrowAnimtionOut();
     arrowAnimtion();
   }, []);
 

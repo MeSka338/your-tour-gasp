@@ -12,6 +12,43 @@ const HomeContainer = () => {
   const [isFixed, setIsFixed] = useState(false);
   const navRef = useRef();
 
+  // CustomCursor
+  const rootRef = useRef();
+
+  const scaleAnim = gsap.timeline({ paused: true });
+
+  const cursoreMove = (e) => {
+    gsap.to(rootRef.current, {
+      x: e.clientX,
+      y: e.clientY,
+      ease: "power1.out",
+
+      stagger: {
+        each: 0.1,
+      },
+    });
+  };
+
+  const scaleAnimation = () => {
+    const targets = gsap.utils.toArray("a");
+
+    scaleAnim.to(rootRef.current, {
+      scale: 7,
+      duration: 0.2,
+    });
+
+    targets.forEach((target) => {
+      target.addEventListener("mouseenter", (e) => {
+        scaleAnim.play();
+      });
+
+      target.addEventListener("mouseleave", (e) => {
+        scaleAnim.reverse();
+      });
+    });
+  };
+
+  //   hero
   const headerAnimation = () => {
     gsap.fromTo(
       heraderRef.current.children,
@@ -104,9 +141,7 @@ const HomeContainer = () => {
       }
     );
   };
-
   //   Review
-
   const textRef = useRef();
   const [click, setClick] = useState(false);
   const [isModal, setIsModal] = useState(false);
@@ -275,9 +310,35 @@ const HomeContainer = () => {
       }
     );
   };
+  //   Footer
+  const footerRef = useRef();
+  const arrowRef = useRef();
+
+  const arrowAnimtion = () => {
+    gsap.fromTo(
+      arrowRef.current,
+      {
+        x: 200,
+      },
+      {
+        scrollTrigger: {
+          trigger: footerRef.current,
+          toggleActions: "play none reverse none ",
+          start: "top bottom",
+
+          end: "top bottom",
+        },
+        x: 0,
+      }
+    );
+  };
 
   return (
     <Home
+      // CustomCursor
+      rootRef={rootRef}
+      cursoreMove={cursoreMove}
+      scaleAnimation={scaleAnimation}
       // hero
       heraderRef={heraderRef}
       subtitleRef={subtitleRef}
@@ -321,6 +382,10 @@ const HomeContainer = () => {
       gallery_3Ref={gallery_3Ref}
       setIsTablet={setIsTablet}
       GalleryAnimation={GalleryAnimation}
+      //   footer
+      footerRef={footerRef}
+      arrowRef={arrowRef}
+      arrowAnimtion={arrowAnimtion}
     />
   );
 };
