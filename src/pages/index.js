@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
-import HomePage from "../components/pages/HomePage";
+import HomeContainer from "../components/pages/HomePage/HomeContainer";
 import Layout from "../components/common/Layout";
 
-export default function Home() {
+export default function HomePage() {
   useEffect(() => {
     (async () => {
       const LocomotiveScroll = (await import("locomotive-scroll")).default;
@@ -13,7 +13,7 @@ export default function Home() {
     <>
       <Layout>
         <main>
-          <HomePage />
+          <HomeContainer />
         </main>
       </Layout>
     </>

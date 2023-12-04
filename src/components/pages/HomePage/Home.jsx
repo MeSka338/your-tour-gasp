@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import s from "./HomePage.module.scss";
+import s from "./Home.module.scss";
 import Hero from "./Hero";
 import SelectTour from "./SelectTour/SelectTour";
 import TourForm from "./TourForm";
@@ -8,7 +8,7 @@ import TravelPhoto from "./TravelPhoto";
 import Stories from "./Stories";
 import Head from "next/head";
 
-const HomePage = () => {
+const Home = () => {
   return (
     <>
       <Head>
@@ -29,4 +29,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default Home;
