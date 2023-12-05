@@ -10,6 +10,9 @@ const TravelPhoto = ({
   gallery_3Ref,
   setIsTablet,
   GalleryAnimation,
+  // section title
+  titleRef,
+  TitleAnimation,
 }) => {
   // const gallery_1Ref = useRef();
   // const gallery_2Ref = useRef();
@@ -49,12 +52,14 @@ const TravelPhoto = ({
 
   return (
     <section className={s.root}>
-      {/* <SectionTitle
+      <SectionTitle
         title={"Фотографии путешествий"}
         subtitle={
           "Идейные соображения высшего порядка, а также рамки и место обучения кадров"
         }
-      /> */}
+        titleRef={titleRef}
+        TitleAnimation={TitleAnimation}
+      />
       <div className={s.gallery} ref={gallery_1Ref}>
         <Images count={4} start={1} small={false} />
         <Images count={4} start={1} small={false} />

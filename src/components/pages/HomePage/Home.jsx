@@ -124,13 +124,21 @@ const Home = ({
           ModalAnimation={ModalAnimation}
         />
         <TravelPhoto
+          // sectionsTitle
+          titleRef={titleRef}
+          TitleAnimation={TitleAnimation}
+          //
           gallery_1Ref={gallery_1Ref}
           gallery_2Ref={gallery_2Ref}
           gallery_3Ref={gallery_3Ref}
           setIsTablet={setIsTablet}
           GalleryAnimation={GalleryAnimation}
         />
-        <Stories />
+        <Stories
+          // sectionTitle
+          titleRef={titleRef}
+          TitleAnimation={TitleAnimation}
+        />
         <Footer
           footerRef={footerRef}
           arrowRef={arrowRef}
