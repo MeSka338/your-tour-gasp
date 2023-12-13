@@ -5,9 +5,9 @@ import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import s from "./SectionTitle.module.scss";
 gsap.registerPlugin(ScrollTrigger);
 
-const SectionTitle = ({ title, subtitle, titleRef, TitleAnimation }) => {
+const SectionTitle = ({ title, subtitle, titleRef, titleAnimation }) => {
   useEffect(() => {
-    TitleAnimation();
+    titleAnimation();
   }, []);
   return (
     <div className={s.root} ref={titleRef}>

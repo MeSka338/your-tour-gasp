@@ -11,24 +11,6 @@ const ModalReview = ({
   modalRef,
   ModalAnimation,
 }) => {
-  // const modalRef = useRef();
-
-  // const ModalAnimation = () => {
-  //   gsap.fromTo(
-  //     modalRef.current,
-  //     {
-  //       scale: 0,
-  //       rotate: "-90deg",
-  //     },
-  //     {
-  //       duration: 1,
-  //       scale: 1,
-  //       rotate: "0",
-  //       width: "auto",
-  //       height: "auto",
-  //     }
-  //   );
-  // };
   useEffect(() => {
     ModalAnimation();
   }, []);

@@ -5,7 +5,7 @@ import SectionTitle from "@/src/components/common/SectionTitle/SectionTitle";
 const Stories = ({
   // sectionTitle
   titleRef,
-  TitleAnimation,
+  titleAnimation,
 }) => {
   return (
     <section className={s.root}>
@@ -16,7 +16,7 @@ const Stories = ({
         }
         // sectionTitle
         titleRef={titleRef}
-        TitleAnimation={TitleAnimation}
+        titleAnimation={titleAnimation}
       />
 
       <CardBig

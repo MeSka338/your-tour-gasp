@@ -5,14 +5,14 @@ import SectionTitle from "@/src/components/common/SectionTitle";
 import gsap from "gsap";
 
 const TravelPhoto = ({
-  gallery_1Ref,
-  gallery_2Ref,
-  gallery_3Ref,
+  gallery1Ref,
+  gallery2Ref,
+  gallery3Ref,
   setIsTablet,
-  GalleryAnimation,
+  galleryAnimation,
   // section title
   titleRef,
-  TitleAnimation,
+  titleAnimation,
 }) => {
   // const gallery_1Ref = useRef();
   // const gallery_2Ref = useRef();
@@ -41,9 +41,9 @@ const TravelPhoto = ({
   // };
 
   useEffect(() => {
-    GalleryAnimation(gallery_1Ref, true);
-    GalleryAnimation(gallery_2Ref, false);
-    GalleryAnimation(gallery_3Ref, true);
+    galleryAnimation(gallery1Ref, true);
+    galleryAnimation(gallery2Ref, false);
+    galleryAnimation(gallery3Ref, true);
 
     if (window.innerWidth <= 1024) setIsTablet(true);
 
@@ -58,17 +58,17 @@ const TravelPhoto = ({
           "Идейные соображения высшего порядка, а также рамки и место обучения кадров"
         }
         titleRef={titleRef}
-        TitleAnimation={TitleAnimation}
+        titleAnimation={titleAnimation}
       />
-      <div className={s.gallery} ref={gallery_1Ref}>
+      <div className={s.gallery} ref={gallery1Ref}>
         <Images count={4} start={1} small={false} />
         <Images count={4} start={1} small={false} />
       </div>
-      <div className={`${s.gallery} ${s.grid_big} `} ref={gallery_2Ref}>
+      <div className={`${s.gallery} ${s.grid_big} `} ref={gallery2Ref}>
         <Images count={5} start={5} small={true} />
         <Images count={5} start={5} small={true} />
       </div>
-      <div className={s.gallery} ref={gallery_3Ref}>
+      <div className={s.gallery} ref={gallery3Ref}>
         <Images count={4} start={10} small={false} />
         <Images count={4} start={10} small={false} />
       </div>

@@ -9,23 +9,23 @@ gsap.registerPlugin(ScrollTrigger);
 
 const SelectTour = ({
   menuArr,
-  TourTitleRef,
+  tourTitleRef,
   listRef,
-  Change,
-  TourTitleAnimation,
-  ListAnimation,
+  onChage,
+  tourTitleAnimation,
+  listAnimation,
   cardsRef,
-  CardsRef,
+  cardsAnimation,
 }) => {
   useEffect(() => {
-    TourTitleAnimation();
-    ListAnimation();
-    CardsRef();
+    tourTitleAnimation();
+    listAnimation();
+    cardsAnimation();
   }, []);
 
   return (
     <section className={s.root}>
-      <h2 className={s.select_tour__title} ref={TourTitleRef}>
+      <h2 className={s.select_tour__title} ref={tourTitleRef}>
         Выбери свой тур
       </h2>
       <ul
@@ -42,7 +42,7 @@ const SelectTour = ({
                     ? `${s.select_tour_menu__link} ${s.active}`
                     : `${s.select_tour_menu__link}`
                 }
-                onClick={() => Change(key)}
+                onClick={() => onChage(key)}
               >
                 {item.title}
               </a>

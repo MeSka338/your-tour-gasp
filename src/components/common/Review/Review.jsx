@@ -3,7 +3,6 @@ import ModalReview from "../ModalReview";
 import Link from "next/link";
 import s from "./Review.module.scss";
 import gsap from "gsap";
-
 const Review = ({
   text,
   name,

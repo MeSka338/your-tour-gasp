@@ -123,7 +123,7 @@ const HomeContainer = () => {
   // sectionTitle
   const titleRef = useRef();
 
-  const TitleAnimation = () => {
+  const titleAnimation = () => {
     gsap.fromTo(
       titleRef.current,
       {
@@ -143,7 +143,7 @@ const HomeContainer = () => {
   const [click, setClick] = useState(false);
   const [isModal, setIsModal] = useState(false);
 
-  const ReviewAnimation = () => {
+  const reviewAnimation = () => {
     setClick(!click);
     if (click === true) {
       gsap.to(
@@ -169,7 +169,7 @@ const HomeContainer = () => {
   //   modalAnimation
   const modalRef = useRef();
 
-  const ModalAnimation = () => {
+  const modalAnimation = () => {
     gsap.fromTo(
       modalRef.current,
       {
@@ -194,11 +194,11 @@ const HomeContainer = () => {
     { title: "Сплавы", isSelect: false },
     { title: "Велопрогулки", isSelect: false },
   ]);
-  const TourTitleRef = useRef();
+  const tourTitleRef = useRef();
   const listRef = useRef();
   const cardsRef = useRef();
 
-  const Change = (key) => {
+  const handleChange = (key) => {
     let arr = [...menuArr];
     arr.forEach((item) => {
       item.isSelect = false;
@@ -208,9 +208,9 @@ const HomeContainer = () => {
     setMenuArr(arr);
   };
 
-  const TourTitleAnimation = () => {
+  const tourTitleAnimation = () => {
     gsap.fromTo(
-      TourTitleRef.current,
+      tourTitleRef.current,
       {
         clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)",
       },
@@ -224,7 +224,7 @@ const HomeContainer = () => {
     );
   };
 
-  const ListAnimation = () => {
+  const listAnimation = () => {
     gsap.fromTo(
       listRef.current.children,
       {
@@ -241,7 +241,7 @@ const HomeContainer = () => {
     );
   };
 
-  const CardsRef = () => {
+  const cardsAnimation = () => {
     gsap.fromTo(
       cardsRef.current.children,
       {
@@ -282,16 +282,16 @@ const HomeContainer = () => {
   };
 
   //   Tour Photo
-  const gallery_1Ref = useRef();
-  const gallery_2Ref = useRef();
-  const gallery_3Ref = useRef();
+  const gallery1Ref = useRef();
+  const gallery2Ref = useRef();
+  const gallery3Ref = useRef();
 
   const [istablet, setIsTablet] = useState(false);
 
   const margin = istablet ? 4 : 7;
   const duration = 30;
 
-  const GalleryAnimation = (gallery_Ref, toLeft) => {
+  const galleryAnimation = (gallery_Ref, toLeft) => {
     let refWidth = gallery_Ref.current.clientWidth;
 
     gsap.fromTo(
@@ -354,31 +354,31 @@ const HomeContainer = () => {
       setClick={setClick}
       isModal={isModal}
       setIsModal={setIsModal}
-      ReviewAnimation={ReviewAnimation}
+      reviewAnimation={reviewAnimation}
       // sectionTitle
       titleRef={titleRef}
-      TitleAnimation={TitleAnimation}
+      titleAnimation={titleAnimation}
       //   modalAnimation
       modalRef={modalRef}
-      ModalAnimation={ModalAnimation}
+      modalAnimation={modalAnimation}
       //  SelectTour
       menuArr={menuArr}
-      TourTitleRef={TourTitleRef}
+      tourTitleRef={tourTitleRef}
       listRef={listRef}
-      Change={Change}
-      TourTitleAnimation={TourTitleAnimation}
-      ListAnimation={ListAnimation}
+      tourTitleAnimation={tourTitleAnimation}
+      listAnimation={listAnimation}
       cardsRef={cardsRef}
-      CardsRef={CardsRef}
+      cardsAnimation={cardsAnimation}
+      onChange={handleChange}
       //   TourForm
       form={form}
       formAnimation={formAnimation}
       //   TourPhoto
-      gallery_1Ref={gallery_1Ref}
-      gallery_2Ref={gallery_2Ref}
-      gallery_3Ref={gallery_3Ref}
+      gallery1Ref={gallery1Ref}
+      gallery2Ref={gallery2Ref}
+      gallery3Ref={gallery3Ref}
       setIsTablet={setIsTablet}
-      GalleryAnimation={GalleryAnimation}
+      galleryAnimation={galleryAnimation}
       //   footer
       footerRef={footerRef}
       arrowRef={arrowRef}

@@ -34,32 +34,32 @@ const Home = ({
   setClick,
   isModal,
   setIsModal,
-  ReviewAnimation,
+  reviewAnimation,
   // sectionsTitle
   titleRef,
-  TitleAnimation,
+  titleAnimation,
   // modalAnimation
-  ModalAnimation,
+  modalAnimation,
   modalRef,
   // SelectTour
   menuArr,
-  TourTitleRef,
+  tourTitleRef,
   listRef,
-  Change,
-  TourTitleAnimation,
-  ListAnimation,
+  onChange,
+  tourTitleAnimation,
+  listAnimation,
   cardsRef,
-  CardsRef,
+  cardsAnimation,
   // TourForm
 
   form,
   formAnimation,
   // TourPhoto
-  gallery_1Ref,
-  gallery_2Ref,
-  gallery_3Ref,
+  gallery1Ref,
+  gallery2Ref,
+  gallery3Ref,
   setIsTablet,
-  GalleryAnimation,
+  galleryAnimation,
   // Footer
   footerRef,
   arrowRef,
@@ -95,17 +95,17 @@ const Home = ({
         />
         <SelectTour
           menuArr={menuArr}
-          TourTitleRef={TourTitleRef}
+          tourTitleRef={tourTitleRef}
           listRef={listRef}
-          Change={Change}
-          TourTitleAnimation={TourTitleAnimation}
-          ListAnimation={ListAnimation}
-          CardsRef={CardsRef}
+          onChange={onChange}
+          tourTitleAnimation={tourTitleAnimation}
+          listAnimation={listAnimation}
+          cardsAnimation={cardsAnimation}
           cardsRef={cardsRef}
         />
         <TourForm
           titleRef={titleRef}
-          TitleAnimation={TitleAnimation}
+          titleAnimation={titleAnimation}
           form={form}
           formAnimation={formAnimation}
         />
@@ -115,29 +115,29 @@ const Home = ({
           setClick={setClick}
           isModal={isModal}
           setIsModal={setIsModal}
-          ReviewAnimation={ReviewAnimation}
+          reviewAnimation={reviewAnimation}
           // sectionsTitle
           titleRef={titleRef}
-          TitleAnimation={TitleAnimation}
+          titleAnimation={titleAnimation}
           // modalAnimation
           modalRef={modalRef}
-          ModalAnimation={ModalAnimation}
+          modalAnimation={modalAnimation}
         />
         <TravelPhoto
           // sectionsTitle
           titleRef={titleRef}
-          TitleAnimation={TitleAnimation}
+          titleAnimation={titleAnimation}
           //
-          gallery_1Ref={gallery_1Ref}
-          gallery_2Ref={gallery_2Ref}
-          gallery_3Ref={gallery_3Ref}
+          gallery1Ref={gallery1Ref}
+          gallery2Ref={gallery2Ref}
+          gallery3Ref={gallery3Ref}
           setIsTablet={setIsTablet}
-          GalleryAnimation={GalleryAnimation}
+          galleryAnimation={galleryAnimation}
         />
         <Stories
           // sectionTitle
           titleRef={titleRef}
-          TitleAnimation={TitleAnimation}
+          titleAnimation={titleAnimation}
         />
         <Footer
           footerRef={footerRef}

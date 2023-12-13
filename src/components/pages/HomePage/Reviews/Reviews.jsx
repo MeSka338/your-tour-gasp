@@ -13,7 +13,7 @@ const Reviews = ({
 
   // seactiontitle
   titleRef,
-  TitleAnimation,
+  titleAnimation,
   // modalAnimfaion
   ModalAnimation,
   modalRef,
@@ -27,7 +27,7 @@ const Reviews = ({
             "Идейные соображения высшего порядка, а также рамки и место обучения кадров"
           }
           titleRef={titleRef}
-          TitleAnimation={TitleAnimation}
+          titleAnimation={titleAnimation}
         />
       </div>
 
