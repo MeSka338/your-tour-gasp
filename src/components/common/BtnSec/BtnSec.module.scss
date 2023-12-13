@@ -1,6 +1,6 @@
 @import "@/styles/typografy.scss";
 
-.secondary_btn {
+.secondaryBtn {
   display: flex;
   gap: 16px;
   position: absolute;
@@ -15,23 +15,23 @@
   z-index: 2;
 }
 
-.secondary_btn__title {
+.secondaryBtnTitle {
   @include p_big;
 }
 
-.secondary_btn:hover {
+.secondaryBtn:hover {
   text-decoration: none;
   border-radius: 50px;
   background-color: $Green400;
 }
 
-.secondary_btn:active {
+.secondaryBtn:active {
   border-radius: 50px;
   background: $Orange200 !important;
 }
 
 @media (max-width: 475px) {
-  .secondary_btn {
+  .secondaryBtn {
     padding: 0;
     left: 25px;
     bottom: 26.5px;

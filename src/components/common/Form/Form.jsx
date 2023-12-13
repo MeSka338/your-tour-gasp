@@ -1,11 +1,11 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, memo } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import s from "./Form.module.scss";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Form = ({ form, formAnimation }) => {
+const Form = memo(({ form, formAnimation }) => {
   useEffect(() => {
     formAnimation();
   }, []);
@@ -136,6 +136,6 @@ const Form = ({ form, formAnimation }) => {
       </div>
     </form>
   );
-};
+});
 
 export default Form;

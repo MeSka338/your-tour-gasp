@@ -2,10 +2,10 @@ import React from "react";
 import s from "./BtnSec.module.scss";
 const BtnSec = () => {
   return (
-    <a href="/" className={s.secondary_btn}>
-      <p className={s.secondary_btn__title}>Подробнее</p>
+    <a href="/" className={s.secondaryBtn}>
+      <p className={s.secondaryBtnTitle}>Подробнее</p>
       <img
-        className={s.secondary_btn__icon}
+        className={s.secondaryBtnIcon}
         src="select-tour/arrow.svg"
         alt="arrow"
       />

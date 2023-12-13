@@ -8,14 +8,14 @@
   margin: 0 53px;
 }
 
-.select_tour__title {
+.selectTourTitle {
   @include h2;
   @include title;
 
   margin-bottom: 35px !important;
 }
 
-.select_tour__menu {
+.selectTourMenu {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
@@ -24,7 +24,7 @@
   // padding-bottom: 106px;
   margin-bottom: 106px;
 }
-.select_tour_menu__item > a {
+.selectTourMenuItem > a {
   @include p_big;
   color: $Black;
 
@@ -37,11 +37,11 @@
   text-decoration-thickness: 2px;
   color: $Orange200 !important;
 }
-.select_tour_menu__link:hover {
+.selectTourMenuLink:hover {
   text-underline-offset: 10px;
   text-decoration-thickness: 2px;
 }
-.select_tour__options {
+.selectTourOptions {
   list-style: none;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -52,7 +52,7 @@
 
 /* TABLET */
 @media (max-width: 1024px) {
-  .select_tour__options {
+  .selectTourOptions {
     width: 100%;
     grid-template-columns: repeat(2, 1fr);
     gap: 18px;
@@ -63,7 +63,7 @@
 }
 
 @media (max-width: 768px) {
-  .select_tour__options {
+  .selectTourOptions {
     grid-template-columns: repeat(1, 1fr);
   }
 }
@@ -76,11 +76,11 @@
     margin: 0 21px;
   }
 
-  .select_tour__title {
+  .selectTourTitle {
     margin-bottom: 30px !important;
   }
 
-  .select_tour__menu {
+  .selectTourMenu {
     padding: 0;
     justify-content: center;
 
@@ -90,11 +90,11 @@
   .active > a {
     text-underline-offset: 4px;
   }
-  .select_tour_menu__link:hover {
+  .selectTourMenuLink:hover {
     text-underline-offset: 4px;
     text-decoration-thickness: 2px;
   }
-  .select_tour__options {
+  .selectTourOptions {
     margin-top: 50px;
   }
   .card:hover .secondary_btn {

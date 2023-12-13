@@ -1,11 +1,11 @@
-import React from "react";
+import React, { memo } from "react";
 import s from "./Stories.module.scss";
 import CardBig from "@/src/components/common/CardBig";
 import SectionTitle from "@/src/components/common/SectionTitle/SectionTitle";
 import storiesData from "@/src/constants/storiesData";
-const Stories = ({ titleRef, titleAnimation }) => {
+const Stories = memo(({ titleRef, titleAnimation, storiesRef }) => {
   return (
-    <section className={s.root}>
+    <section className={s.root} ref={storiesRef}>
       <SectionTitle
         title={"Истории путешествий"}
         subtitle={
@@ -29,6 +29,6 @@ const Stories = ({ titleRef, titleAnimation }) => {
       })}
     </section>
   );
-};
+});
 
 export default Stories;

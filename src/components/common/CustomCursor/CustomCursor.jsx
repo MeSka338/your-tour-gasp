@@ -1,8 +1,8 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useRef, memo } from "react";
 import s from "./CustomCursor.module.scss";
 import gsap from "gsap";
 
-const CustomCursor = ({ rootRef, cursoreMove, scaleAnimation }) => {
+const CustomCursor = memo(({ rootRef, cursoreMove, scaleAnimation }) => {
   useEffect(() => {
     gsap.set(rootRef.current, {
       xPercent: -50,
@@ -15,6 +15,6 @@ const CustomCursor = ({ rootRef, cursoreMove, scaleAnimation }) => {
   }, []);
 
   return <div className={s.root} ref={rootRef}></div>;
-};
+});
 
 export default CustomCursor;

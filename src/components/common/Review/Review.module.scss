@@ -20,7 +20,7 @@
   }
 }
 
-.review__textblock {
+.reviewTextblock {
   @include p_big;
 
   color: $Black;
@@ -35,13 +35,13 @@
   align-items: flex-end;
 }
 
-.profile__name {
+.profileName {
   @include h3;
   margin-bottom: 8px;
   color: $Black;
 }
 
-.profile__tour {
+.profileTour {
   @include p_small;
   color: $Gray300;
 }

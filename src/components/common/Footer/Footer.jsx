@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { memo, useEffect, useRef } from "react";
 import Link from "next/link";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
@@ -6,76 +6,81 @@ import s from "./Footer.module.scss";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Footer = ({ footerRef, arrowRef, arrowAnimtion }) => {
- 
-  useEffect(() => {
-    arrowAnimtion();
-  }, []);
+const Footer = memo(
+  ({ footerRef, arrowRef, arrowAnimtion, heroRef, scrollToAnimation }) => {
+    useEffect(() => {
+      arrowAnimtion();
+    }, []);
 
-  return (
-    <footer className={s.root} ref={footerRef}>
-      <Link href={"#"} className={s.arrow} ref={arrowRef}>
-        <span className={s.arrow_icon}></span>
-      </Link>
-      <div className={s.footer_container}>
-        <img
-          src="/footer/footer photo.jpg"
-          alt="footer img"
-          className={s.footer__img}
-        />
-        <div className={s.footer__content}>
-          <h3 className={s.footer__title}>Пора в путешествие вместе с нами!</h3>
-          <p className={s.footer__subtitle}>
-            Напиши на почту и узнай подробности
-            <br />
-            на{" "}
-            <a href="/" className={s.link}>
-              yourtour@gmail.com
-            </a>
-          </p>
+    return (
+      <footer className={s.root} ref={footerRef}>
+        <a
+          className={s.arrow}
+          ref={arrowRef}
+          onClick={() => scrollToAnimation(heroRef)}
+        >
+          <span className={s.arrowIcon}></span>
+        </a>
+        <div className={s.footerContainer}>
+          <img
+            src="/footer/footer photo.jpg"
+            alt="footer img"
+            className={s.footerImg}
+          />
+          <div className={s.footerContent}>
+            <h3 className={s.footerTitle}>Пора в путешествие вместе с нами!</h3>
+            <p className={s.footerSubtitle}>
+              Напиши на почту и узнай подробности
+              <br />
+              на{" "}
+              <a href="/" className={s.link}>
+                yourtour@gmail.com
+              </a>
+            </p>
+          </div>
         </div>
-      </div>
-      <div className={s.contacts_container}>
-        <div className={s.footer__contacts}>
-          <p className={s.contacts__title}>Наши социальные сети</p>
-          <div className={`${s.contacts__socials} ${s.socials}`}>
-            <div className={`${s.contacts__item} ${s.socials__item}`}>
-              <img
-                className={s.contacts__icon}
-                src="/footer/instagram-icon.png"
-                alt=""
-              />
-              <a href="/" className={s.socials__title}>
-                instagram
-              </a>
-            </div>
+        <div className={s.contactsContainer}>
+          <div className={s.footerContacts}>
+            <p className={s.contactsTitle}>Наши социальные сети</p>
+            <div className={`${s.contactsSocials} ${s.socials}`}>
+              <div className={`${s.contactsItem} ${s.socials__item}`}>
+                <img
+                  className={s.contactsIcon}
+                  src="/footer/instagram-icon.png"
+                  alt=""
+                />
+                <a href="/" className={s.socialsTitle}>
+                  instagram
+                </a>
+              </div>
 
-            <div className={`${s.contacts__item} ${s.socials__item}`}>
-              <img
-                className={s.contacts__icon}
-                src="/footer/facebook-icon.png"
-                alt=""
-              />
-              <a href="/" className={s.socials__title}>
-                facebook
-              </a>
-            </div>
+              <div className={`${s.contactsItem} ${s.socials__item}`}>
+                <img
+                  className={s.contactsIcon}
+                  src="/footer/facebook-icon.png"
+                  alt=""
+                />
+                <a href="/" className={s.socialsTitle}>
+                  facebook
+                </a>
+              </div>
 
-            <div className={`${s.contacts__item} ${s.socials__item}`}>
-              <img
-                className={s.contacts__icon}
-                src="/footer/vk-icon.png"
-                alt=""
-              />
-              <a href="/" className={s.socials__title}>
-                vkontakte
-              </a>
+              <div className={`${s.contactsItem} ${s.socials__item}`}>
+                <img
+                  className={s.contactsIcon}
+                  src="/footer/vk-icon.png"
+                  alt=""
+                />
+                <a href="/" className={s.socialsTitle}>
+                  vkontakte
+                </a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </footer>
-  );
-};
+      </footer>
+    );
+  }
+);
 
 export default Footer;

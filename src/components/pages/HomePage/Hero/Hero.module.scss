@@ -34,7 +34,7 @@
   height: 100%;
 }
 
-.hero__subtitle {
+.heroSubtitle {
   @include p_normal;
 
   text-align: center;
@@ -54,7 +54,7 @@
 /* TABLET */
 
 @media (max-width: 1024px) {
-  .hero__subtitle {
+  .heroSubtitle {
     max-width: 442px;
   }
 }
@@ -74,7 +74,7 @@
     width: 60%;
   }
 
-  .hero__subtitle {
+  .heroSubtitle {
     width: 75%;
   }
 }

@@ -6,7 +6,7 @@
   align-items: center;
 }
 
-.stories__title {
+.storiesTitle {
   @include h2;
   @include title;
 
@@ -14,7 +14,7 @@
   text-align: center;
   color: $Black;
 }
-.stories__subtitle {
+.storiesSubtitle {
   @include p_normal;
   @include subtitle;
 }
