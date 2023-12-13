@@ -1,10 +1,11 @@
-import React, { useCallback, useRef, useState } from "react";
+import React, { memo, useCallback, useRef, useState } from "react";
 import gsap from "gsap";
 import ScrollToPlugin from "gsap/dist/ScrollToPlugin";
+import Hero from ".";
+
 gsap.registerPlugin(ScrollToPlugin);
 
-import Hero from ".";
-const HeroContainer = ({ sectionRefList, scrollToAnimation }) => {
+const HeroContainer = memo(({ sectionRefList, scrollToAnimation }) => {
   const [isFixed, setIsFixed] = useState(false);
 
   const heraderRef = useRef();
@@ -107,6 +108,6 @@ const HeroContainer = ({ sectionRefList, scrollToAnimation }) => {
       scrollToAnimation={scrollToAnimation}
     />
   );
-};
+});
 
 export default HeroContainer;

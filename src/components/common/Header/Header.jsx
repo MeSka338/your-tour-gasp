@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef, memo } from "react";
 import s from "./Header.module.scss";
-import gsap from "gsap";
 
 const Header = memo(
   ({

@@ -4,6 +4,12 @@ import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import Home from "./Home";
 const HomeContainer = () => {
   gsap.registerPlugin(ScrollTrigger);
+  //   Footer
+  const footerRef = useRef();
+  const arrowRef = useRef();
+  // CustomCursor
+  const rootRef = useRef();
+
   const sectionRefList = {
     hero: useRef(),
     selectTour: useRef(),
@@ -11,12 +17,10 @@ const HomeContainer = () => {
     reviews: useRef(),
     stories: useRef(),
   };
-  // CustomCursor
-  const rootRef = useRef();
 
   const scaleAnim = gsap.timeline({ paused: true });
 
-  const cursoreMove = (e) => {
+  const cursoreMove = useCallback((e) => {
     gsap.to(rootRef.current, {
       x: e.clientX,
       y: e.clientY,
@@ -26,9 +30,9 @@ const HomeContainer = () => {
         each: 0.1,
       },
     });
-  };
+  }, []);
 
-  const scaleAnimation = () => {
+  const scaleAnimation = useCallback(() => {
     const targets = gsap.utils.toArray("a");
     scaleAnim.to(rootRef.current, {
       scale: 7,
@@ -42,32 +46,9 @@ const HomeContainer = () => {
         scaleAnim.reverse();
       });
     });
-  };
+  }, []);
 
-  // sectionTitle
-  const titleRef = useRef();
-
-  const titleAnimation = () => {
-    gsap.fromTo(
-      titleRef.current,
-      {
-        clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)",
-      },
-      {
-        scrollTrigger: titleRef.current,
-
-        clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-        duration: 1,
-        ease: "power1.out",
-      }
-    );
-  };
-
-  //   Footer
-  const footerRef = useRef();
-  const arrowRef = useRef();
-
-  const arrowAnimtion = () => {
+  const arrowAnimtion = useCallback(() => {
     gsap.fromTo(
       arrowRef.current,
       {
@@ -84,7 +65,7 @@ const HomeContainer = () => {
         x: 0,
       }
     );
-  };
+  }, []);
   const scrollToAnimation = useCallback((sectionRef) => {
     gsap.to(window, {
       duration: 2,

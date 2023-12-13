@@ -4,6 +4,7 @@ import SectionTitle from "@/src/components/common/SectionTitle";
 import Review from "@/src/components/common/Review";
 
 import reviewData from "@/src/constants/reviewData";
+import SectionTitleContainer from "@/src/components/common/SectionTitle/SectionTitleContainer";
 const Reviews = memo(
   ({
     // review
@@ -15,24 +16,18 @@ const Reviews = memo(
     reviewAnimation,
     reviewsRef,
 
-    // seactiontitle
-    titleRef,
-    titleAnimation,
-    // modalAnimfaion
     modalAnimation,
     modalRef,
   }) => {
     return (
       <section className={s.root} id="review" ref={reviewsRef}>
         <div className={s.reviwesTitle}>
-          {/* <SectionTitle
-          title={"Отзывы наших путешественников"}
-          subtitle={
-            "Идейные соображения высшего порядка, а также рамки и место обучения кадров"
-          }
-          titleRef={titleRef}
-          titleAnimation={titleAnimation}
-        /> */}
+          <SectionTitleContainer
+            title={"Отзывы наших путешественников"}
+            subtitle={
+              "Идейные соображения высшего порядка, а также рамки и место обучения кадров"
+            }
+          />
         </div>
 
         <div className={s.reviewWrapper}>

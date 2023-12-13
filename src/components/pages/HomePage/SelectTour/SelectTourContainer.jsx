@@ -1,8 +1,8 @@
-import React, { useRef, useState } from "react";
+import React, { memo, useRef, useState } from "react";
 import SelectTour from "./SelectTour";
 import gsap from "gsap";
 
-const SelectTourContainer = ({ selectTourRef }) => {
+const SelectTourContainer = memo(({ selectTourRef }) => {
   const [menuArr, setMenuArr] = useState([
     { title: "Популярные", isSelect: true },
     { title: "Авторские", isSelect: false },
@@ -87,6 +87,6 @@ const SelectTourContainer = ({ selectTourRef }) => {
       selectTourRef={selectTourRef}
     />
   );
-};
+});
 
 export default SelectTourContainer;

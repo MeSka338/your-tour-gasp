@@ -1,8 +1,8 @@
-import React, { useRef, useState } from "react";
+import React, { memo, useRef, useState } from "react";
 import gsap from "gsap";
 import Reviews from "./Reviews";
 
-const ReviewsContainer = ({ reviewsRef }) => {
+const ReviewsContainer = memo(({ reviewsRef }) => {
   const textRef = useRef();
   const [click, setClick] = useState(false);
   const [isModal, setIsModal] = useState(false);
@@ -25,7 +25,6 @@ const ReviewsContainer = ({ reviewsRef }) => {
 
         {
           position: "auto",
-          // zIndex: 10000,
         }
       );
     }
@@ -58,15 +57,12 @@ const ReviewsContainer = ({ reviewsRef }) => {
       isModal={isModal}
       setIsModal={setIsModal}
       reviewAnimation={reviewAnimation}
-      // sectionTitle
-      // titleRef={titleRef}
-      // titleAnimation={titleAnimation}
       //   modalAnimation
       modalRef={modalRef}
       modalAnimation={modalAnimation}
       reviewsRef={reviewsRef}
     />
   );
-};
+});
 
 export default ReviewsContainer;

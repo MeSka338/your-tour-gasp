@@ -1,8 +1,7 @@
-import React, { memo, useEffect, useRef, useState } from "react";
+import React, { memo, useEffect } from "react";
 import ModalReview from "../ModalReview";
 import Link from "next/link";
 import s from "./Review.module.scss";
-import gsap from "gsap";
 const Review = memo(
   ({
     text,
@@ -11,10 +10,8 @@ const Review = memo(
     profileImg,
     textRef,
     click,
-    setClick,
     isModal,
     setIsModal,
-    reviewAnimation,
     // modalReview
     modalRef,
     modalAnimation,

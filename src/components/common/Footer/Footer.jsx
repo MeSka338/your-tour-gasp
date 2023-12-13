@@ -1,5 +1,4 @@
-import React, { memo, useEffect, useRef } from "react";
-import Link from "next/link";
+import React, { memo, useEffect } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import s from "./Footer.module.scss";

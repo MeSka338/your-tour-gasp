@@ -1,9 +1,8 @@
-import React, { useRef } from "react";
+import React, { memo, useRef } from "react";
 import gsap from "gsap";
 import TourForm from ".";
 
-const TourFormContainer = ({ formRef }) => {
-  // const titleRef = useref();
+const TourFormContainer = memo(({ formRef }) => {
   const form = useRef();
 
   const formAnimation = () => {
@@ -23,14 +22,8 @@ const TourFormContainer = ({ formRef }) => {
     );
   };
   return (
-    <TourForm
-      // titleRef={titleRef}
-      // titleAnimation={titleAnimation}
-      form={form}
-      formAnimation={formAnimation}
-      formRef={formRef}
-    />
+    <TourForm form={form} formAnimation={formAnimation} formRef={formRef} />
   );
-};
+});
 
 export default TourFormContainer;

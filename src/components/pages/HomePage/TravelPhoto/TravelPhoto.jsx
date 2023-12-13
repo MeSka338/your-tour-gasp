@@ -3,6 +3,7 @@ import Arr from "@/utils/array";
 import s from "./TravelPhoto.module.scss";
 import SectionTitle from "@/src/components/common/SectionTitle";
 import gsap from "gsap";
+import SectionTitleContainer from "@/src/components/common/SectionTitle/SectionTitleContainer";
 
 const TravelPhoto = memo(
   ({
@@ -12,10 +13,6 @@ const TravelPhoto = memo(
     setIsTablet,
     galleryAnimation,
     gallerySecRef,
-    scrollToSection,
-    // section title
-    titleRef,
-    titleAnimation,
   }) => {
     useEffect(() => {
       galleryAnimation(gallery1Ref, true);
@@ -28,13 +25,11 @@ const TravelPhoto = memo(
 
     return (
       <section className={s.root} ref={gallerySecRef}>
-        <SectionTitle
+        <SectionTitleContainer
           title={"Фотографии путешествий"}
           subtitle={
             "Идейные соображения высшего порядка, а также рамки и место обучения кадров"
           }
-          titleRef={titleRef}
-          titleAnimation={titleAnimation}
         />
         <div className={s.gallery} ref={gallery1Ref}>
           <Images count={4} start={1} small={false} />

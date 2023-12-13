@@ -1,13 +1,8 @@
 import React, { useState, useEffect, memo } from "react";
 import s from "./Home.module.scss";
-import Hero from "./Hero";
-import SelectTour from "./SelectTour/SelectTour";
-import TourForm from "./TourForm";
-import Reviews from "./Reviews/Reviews";
-import TravelPhoto from "./TravelPhoto";
+
 import Stories from "./Stories";
 import Head from "next/head";
-import Footer from "../../common/Footer";
 import CustomCursor from "../../common/CustomCursor";
 import HeroContainer from "./Hero/HeroContainer";
 import SelectTourContainer from "./SelectTour/SelectTourContainer";
@@ -19,16 +14,13 @@ import FooterContainer from "../../common/Footer/FooterContainer";
 const Home = memo(
   ({
     // customCursor
-
     rootRef,
     cursoreMove,
     scaleAnimation,
     // hero
     sectionRefList,
-
     titleRef,
     titleAnimation,
-
     // Footer
     footerRef,
     arrowRef,
