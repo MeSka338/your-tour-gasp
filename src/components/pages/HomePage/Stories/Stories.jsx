@@ -2,11 +2,8 @@ import React from "react";
 import s from "./Stories.module.scss";
 import CardBig from "@/src/components/common/CardBig";
 import SectionTitle from "@/src/components/common/SectionTitle/SectionTitle";
-const Stories = ({
-  // sectionTitle
-  titleRef,
-  titleAnimation,
-}) => {
+import storiesData from "@/src/constants/storiesData";
+const Stories = ({ titleRef, titleAnimation }) => {
   return (
     <section className={s.root}>
       <SectionTitle
@@ -18,28 +15,18 @@ const Stories = ({
         titleRef={titleRef}
         titleAnimation={titleAnimation}
       />
-
-      <CardBig
-        img="/stories/story photo-1.jpg"
-        title="Автостопом в Стамбул"
-        subtitle="Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании новых предложений."
-        subtitbleList={true}
-        socials={["instagram", "facebook", "YouTube"]}
-      />
-      <CardBig
-        img="/stories/story photo-2.jpg"
-        title="Автостопом в Стамбул"
-        subtitle="Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании новых предложений."
-        subtitbleList={false}
-        socials={["instagram", "ВКонтакте"]}
-      />
-      <CardBig
-        img="/stories/story photo-3.jpg"
-        title="Автостопом в Стамбул"
-        subtitle="Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании новых предложений."
-        subtitbleList={false}
-        socials={["instagram", "facebook", "ВКонтакте"]}
-      />
+      {storiesData.map((item, key) => {
+        return (
+          <CardBig
+            key={key}
+            img={item.img}
+            title={item.title}
+            subtitle={item.subtitle}
+            subtitbleList={item.subtitbleList}
+            socials={item.socials}
+          />
+        );
+      })}
     </section>
   );
 };

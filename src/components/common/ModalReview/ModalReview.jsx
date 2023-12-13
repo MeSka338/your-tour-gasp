@@ -9,10 +9,10 @@ const ModalReview = ({
   setIsModal,
   reviewRef,
   modalRef,
-  ModalAnimation,
+  modalAnimation,
 }) => {
   useEffect(() => {
-    ModalAnimation();
+    modalAnimation();
   }, []);
 
   return (

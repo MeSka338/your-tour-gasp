@@ -13,10 +13,10 @@ const Review = ({
   setClick,
   isModal,
   setIsModal,
-  ReviewAnimation,
+  reviewAnimation,
   // modalReview
   modalRef,
-  ModalAnimation,
+  modalAnimation,
 }) => {
   useEffect(() => {
     if (isModal) {
@@ -37,7 +37,7 @@ const Review = ({
           setIsModal={setIsModal}
           reviewRef={textRef}
           modalRef={modalRef}
-          ModalAnimation={ModalAnimation}
+          modalAnimation={modalAnimation}
         />
       )}
       <Link
