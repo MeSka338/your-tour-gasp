@@ -5,15 +5,9 @@ import Review from "@/src/components/common/Review";
 
 import reviewData from "@/src/constants/reviewData";
 import SectionTitleContainer from "@/src/components/common/SectionTitle/SectionTitleContainer";
+import ReviewContainer from "@/src/components/common/Review/ReviewContainer";
 const Reviews = memo(
   ({
-    // review
-    textRef,
-    click,
-    setClick,
-    isModal,
-    setIsModal,
-    reviewAnimation,
     reviewsRef,
 
     modalAnimation,
@@ -33,18 +27,12 @@ const Reviews = memo(
         <div className={s.reviewWrapper}>
           {reviewData.map((item, key) => {
             return (
-              <Review
+              <ReviewContainer
                 key={key}
                 text={item.text}
                 name={item.name}
                 tourType={item.tourType}
                 profileImg={item.profileImg}
-                textRef={textRef}
-                click={click}
-                setClick={setClick}
-                isModal={isModal}
-                setIsModal={setIsModal}
-                reviewAnimation={reviewAnimation}
                 // modalReview
                 modalRef={modalRef}
                 modalAnimation={modalAnimation}

@@ -1,21 +1,9 @@
 import React, { memo, useEffect } from "react";
-import ModalReview from "../ModalReview";
 import Link from "next/link";
 import s from "./Review.module.scss";
+import ModalReviewContainer from "../ModalReview/ModalReviewContainer";
 const Review = memo(
-  ({
-    text,
-    name,
-    tourType,
-    profileImg,
-    textRef,
-    click,
-    isModal,
-    setIsModal,
-    // modalReview
-    modalRef,
-    modalAnimation,
-  }) => {
+  ({ text, name, tourType, profileImg, textRef, isModal, setIsModal }) => {
     useEffect(() => {
       if (isModal) {
         document.body.style.overflow = "hidden";
@@ -27,15 +15,12 @@ const Review = memo(
     return (
       <>
         {isModal && (
-          <ModalReview
+          <ModalReviewContainer
             text={text}
             name={name}
             tourType={tourType}
             profileImg={profileImg}
             setIsModal={setIsModal}
-            reviewRef={textRef}
-            modalRef={modalRef}
-            modalAnimation={modalAnimation}
           />
         )}
         <Link
@@ -45,7 +30,7 @@ const Review = memo(
           onClick={() => setIsModal(true)}
         >
           <p className={s.reviewTextblock}>
-            {click ? text : text.split(" ").slice(0, 20).join(" ") + "..."}
+            {text.split(" ").slice(0, 20).join(" ") + "..."}
           </p>
 
           <div className={s.profile}>

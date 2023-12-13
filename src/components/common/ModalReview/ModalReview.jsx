@@ -1,5 +1,4 @@
 import React, { useRef, useEffect, memo } from "react";
-import gsap from "gsap";
 import s from "./ModalReview.module.scss";
 const ModalReview = memo(
   ({
@@ -8,7 +7,6 @@ const ModalReview = memo(
     name,
     tourType,
     setIsModal,
-    reviewRef,
     modalRef,
     modalAnimation,
   }) => {

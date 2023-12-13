@@ -19,8 +19,6 @@ const TravelPhoto = memo(
       galleryAnimation(gallery2Ref, false);
       galleryAnimation(gallery3Ref, true);
       if (window.innerWidth <= 1024) setIsTablet(true);
-
-      console.log("res");
     }, []);
 
     return (

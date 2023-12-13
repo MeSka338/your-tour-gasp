@@ -17,7 +17,6 @@ const HomeContainer = () => {
     reviews: useRef(),
     stories: useRef(),
   };
-
   const scaleAnim = gsap.timeline({ paused: true });
 
   const cursoreMove = useCallback((e) => {
@@ -69,6 +68,7 @@ const HomeContainer = () => {
   const scrollToAnimation = useCallback((sectionRef) => {
     gsap.to(window, {
       duration: 2,
+      ease: "power4.out",
       scrollTo: {
         y: sectionRef.current,
       },

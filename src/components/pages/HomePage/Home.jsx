@@ -28,7 +28,6 @@ const Home = memo(
 
     scrollToAnimation,
   }) => {
-    console.log(sectionRefList);
     return (
       <>
         <Head>
