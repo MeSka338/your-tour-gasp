@@ -18,7 +18,7 @@ const TourFormContainer = memo(({ formRef }) => {
           start: "top center",
         },
         opacity: 1,
-      }
+      },
     );
   };
   return (

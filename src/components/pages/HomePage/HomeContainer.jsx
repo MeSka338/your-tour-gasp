@@ -1,7 +1,8 @@
-import React, { useCallback, useRef, useState } from "react";
+import React, { useCallback, useRef } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import Home from "./Home";
+
 const HomeContainer = () => {
   gsap.registerPlugin(ScrollTrigger);
   //   Footer
@@ -38,14 +39,14 @@ const HomeContainer = () => {
       duration: 0.2,
     });
     targets.forEach((target) => {
-      target.addEventListener("mouseenter", (e) => {
+      target.addEventListener("mouseenter", () => {
         scaleAnim.play();
       });
-      target.addEventListener("mouseleave", (e) => {
+      target.addEventListener("mouseleave", () => {
         scaleAnim.reverse();
       });
     });
-  }, []);
+  }, [scaleAnim]);
 
   const arrowAnimtion = useCallback(() => {
     gsap.fromTo(

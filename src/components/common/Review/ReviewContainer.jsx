@@ -1,6 +1,6 @@
 import React, { memo, useCallback, useEffect, useRef, useState } from "react";
-import Review from "./Review";
 import gsap from "gsap";
+import Review from "./Review";
 
 const ReviewContainer = memo(({ text, name, tourType, profileImg }) => {
   const textRef = useRef();
@@ -31,7 +31,7 @@ const ReviewContainer = memo(({ text, name, tourType, profileImg }) => {
 
   useEffect(() => {
     reviewAnimation();
-  }, []);
+  }, [reviewAnimation]);
 
   return (
     <Review

@@ -19,7 +19,7 @@ const ModalReviewContainer = memo(
           rotate: "0",
           width: "auto",
           height: "auto",
-        }
+        },
       );
     }, []);
 
@@ -34,7 +34,7 @@ const ModalReviewContainer = memo(
         setIsModal={setIsModal}
       />
     );
-  }
+  },
 );
 
 export default ModalReviewContainer;

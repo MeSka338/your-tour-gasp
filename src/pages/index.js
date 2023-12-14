@@ -9,10 +9,8 @@ export default function HomePage() {
     })();
   }, []);
   return (
-    <>
-      <main>
-        <HomeContainer />
-      </main>
-    </>
+    <main>
+      <HomeContainer />
+    </main>
   );
 }

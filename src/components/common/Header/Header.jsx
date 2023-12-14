@@ -1,4 +1,6 @@
-import React, { useState, useEffect, useRef, memo } from "react";
+import React, { useEffect, memo } from "react";
+import Link from "next/link";
+
 import s from "./Header.module.scss";
 
 const Header = memo(
@@ -13,7 +15,7 @@ const Header = memo(
     useEffect(() => {
       navAnimation();
       window.addEventListener("scroll", updateScroll);
-    }, []);
+    }, [navAnimation, updateScroll]);
     return (
       <header className={s.root}>
         <div
@@ -26,7 +28,7 @@ const Header = memo(
         >
           <nav className={s.headerNav} ref={navRef}>
             <div className={s.logo}>
-              <a href={"/"} className={s.logoHref}>
+              <Link href="/" className={s.logoHref}>
                 <img
                   src={
                     isFixed
@@ -36,7 +38,7 @@ const Header = memo(
                   alt={s.mainLogo}
                   className={s.logoImg}
                 />
-              </a>
+              </Link>
             </div>
             <ul className={s.menu}>
               <li className={s.menuItem}>
@@ -72,7 +74,6 @@ const Header = memo(
                 </a>
               </li>
             </ul>
-
             <p className={s.contact}>+7 999 999 99 99</p>
           </nav>
         </div>

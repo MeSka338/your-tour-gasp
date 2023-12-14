@@ -1,8 +1,8 @@
-import React, { useState, useEffect, memo } from "react";
+import React, { memo } from "react";
+import Head from "next/head";
 import s from "./Home.module.scss";
 
 import Stories from "./Stories";
-import Head from "next/head";
 import CustomCursor from "../../common/CustomCursor";
 import HeroContainer from "./Hero/HeroContainer";
 import SelectTourContainer from "./SelectTour/SelectTourContainer";
@@ -67,7 +67,7 @@ const Home = memo(
         </main>
       </>
     );
-  }
+  },
 );
 
 export default Home;

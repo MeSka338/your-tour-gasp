@@ -2,6 +2,7 @@ import React, { memo, useEffect } from "react";
 import Link from "next/link";
 import s from "./Review.module.scss";
 import ModalReviewContainer from "../ModalReview/ModalReviewContainer";
+
 const Review = memo(
   ({ text, name, tourType, profileImg, textRef, isModal, setIsModal }) => {
     useEffect(() => {
@@ -24,13 +25,13 @@ const Review = memo(
           />
         )}
         <Link
-          href={"#review"}
+          href="#review"
           className={s.review}
           ref={textRef}
           onClick={() => setIsModal(true)}
         >
           <p className={s.reviewTextblock}>
-            {text.split(" ").slice(0, 20).join(" ") + "..."}
+            {`${text.split(" ").slice(0, 20).join(" ")}...`}
           </p>
 
           <div className={s.profile}>
@@ -43,7 +44,7 @@ const Review = memo(
         </Link>
       </>
     );
-  }
+  },
 );
 
 export default Review;

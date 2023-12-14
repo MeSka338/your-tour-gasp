@@ -1,8 +1,9 @@
-import React, { useRef, useEffect, memo } from "react";
+import React, { memo } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 
 import s from "./SectionTitle.module.scss";
+
 gsap.registerPlugin(ScrollTrigger);
 
 const SectionTitle = memo(({ title, subtitle, titleRef }) => {

@@ -12,7 +12,7 @@ const FooterContainer = memo(
         scrollToAnimation={scrollToAnimation}
       />
     );
-  }
+  },
 );
 
 export default FooterContainer;

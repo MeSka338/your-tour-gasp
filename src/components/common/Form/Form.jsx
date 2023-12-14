@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, memo } from "react";
+import React, { useEffect, memo } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import s from "./Form.module.scss";
@@ -8,7 +8,7 @@ gsap.registerPlugin(ScrollTrigger);
 const Form = memo(({ form, formAnimation }) => {
   useEffect(() => {
     formAnimation();
-  }, []);
+  }, [formAnimation]);
   return (
     <form className={s.tour_form__form} ref={form}>
       <div className={s.form_container}>
@@ -78,9 +78,7 @@ const Form = memo(({ form, formAnimation }) => {
           <p className={`${s.form_element__title} ${s.comment_title}`}>
             Комментарий
           </p>
-          <textarea
-            className={`${s.form_element__input} ${s.comment}`}
-          ></textarea>
+          <textarea className={`${s.form_element__input} ${s.comment}`} />
         </div>
 
         <div className={s.age_check}>
@@ -92,7 +90,7 @@ const Form = memo(({ form, formAnimation }) => {
             id="yes"
           />
           <div className={s.fake_radio_container}>
-            <label htmlFor="yes" className={s.fake_radio}></label>
+            <label htmlFor="yes" className={s.fake_radio} />
             <label className={s.radio_label} htmlFor="yes">
               Да
             </label>
@@ -104,7 +102,7 @@ const Form = memo(({ form, formAnimation }) => {
             id="no"
           />
           <div className={s.fake_radio_container}>
-            <label htmlFor="no" className={s.fake_radio}></label>
+            <label htmlFor="no" className={s.fake_radio} />
             <label className={s.radio_label} htmlFor="no">
               Нет
             </label>
@@ -117,7 +115,7 @@ const Form = memo(({ form, formAnimation }) => {
             id="check"
             name="licen"
           />
-          <label className={s.checkbox_label} htmlFor="check"></label>
+          <label className={s.checkbox_label} htmlFor="check" />
           <p className={s.checkbox_title}>
             Нажимая кнопку, я принимаю условия{" "}
             <a href="/" className={s.link}>

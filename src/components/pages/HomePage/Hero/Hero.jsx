@@ -76,7 +76,7 @@ const Hero = memo(
         </div>
       </>
     );
-  }
+  },
 );
 
 export default Hero;

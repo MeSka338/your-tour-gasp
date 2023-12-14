@@ -1,6 +1,6 @@
 import React, { memo, useCallback, useEffect, useRef } from "react";
-import SectionTitle from "./SectionTitle";
 import gsap from "gsap";
+import SectionTitle from "./SectionTitle";
 
 const SectionTitleContainer = memo(({ title, subtitle }) => {
   const titleRef = useRef();
@@ -21,7 +21,7 @@ const SectionTitleContainer = memo(({ title, subtitle }) => {
   }, []);
   useEffect(() => {
     titleAnimation();
-  }, []);
+  }, [titleAnimation]);
   return <SectionTitle title={title} subtitle={subtitle} titleRef={titleRef} />;
 });
 

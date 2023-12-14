@@ -8,10 +8,8 @@ const Stories = memo(({ storiesRef }) => {
   return (
     <section className={s.root} ref={storiesRef}>
       <SectionTitleContainer
-        title={"Истории путешествий"}
-        subtitle={
-          " Идейные соображения высшего порядка, а также рамки и место обучениякадров"
-        }
+        title="Истории путешествий"
+        subtitle=" Идейные соображения высшего порядка, а также рамки и место обучениякадров"
       />
       {storiesData.map((item, key) => {
         return (

@@ -9,7 +9,7 @@ const Footer = memo(
   ({ footerRef, arrowRef, arrowAnimtion, heroRef, scrollToAnimation }) => {
     useEffect(() => {
       arrowAnimtion();
-    }, []);
+    }, [arrowAnimtion]);
 
     return (
       <footer className={s.root} ref={footerRef}>
@@ -18,7 +18,7 @@ const Footer = memo(
           ref={arrowRef}
           onClick={() => scrollToAnimation(heroRef)}
         >
-          <span className={s.arrowIcon}></span>
+          <span className={s.arrowIcon} />
         </a>
         <div className={s.footerContainer}>
           <img

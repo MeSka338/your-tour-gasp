@@ -1,6 +1,6 @@
 import React, { memo, useCallback, useRef, useState } from "react";
-import SelectTour from "./SelectTour";
 import gsap from "gsap";
+import SelectTour from "./SelectTour";
 
 const SelectTourContainer = memo(({ selectTourRef }) => {
   const [menuArr, setMenuArr] = useState([
@@ -16,7 +16,7 @@ const SelectTourContainer = memo(({ selectTourRef }) => {
   const cardsRef = useRef();
 
   const handleChange = useCallback((key) => {
-    let arr = [...menuArr];
+    const arr = [...menuArr];
     arr.forEach((item) => {
       item.isSelect = false;
     });
@@ -36,7 +36,7 @@ const SelectTourContainer = memo(({ selectTourRef }) => {
         clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
         duration: 1,
         ease: "power1.out",
-      }
+      },
     );
   }, []);
   const listAnimation = useCallback(() => {
@@ -52,7 +52,7 @@ const SelectTourContainer = memo(({ selectTourRef }) => {
           each: 0.2,
           // ease: "power1.out",
         },
-      }
+      },
     );
   }, []);
   const cardsAnimation = useCallback(() => {
@@ -71,7 +71,7 @@ const SelectTourContainer = memo(({ selectTourRef }) => {
           each: 0.1,
           ease: "power1.out",
         },
-      }
+      },
     );
   }, []);
   return (

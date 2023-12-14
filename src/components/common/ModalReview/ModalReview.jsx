@@ -1,5 +1,6 @@
-import React, { useRef, useEffect, memo } from "react";
+import React, { useEffect, memo } from "react";
 import s from "./ModalReview.module.scss";
+
 const ModalReview = memo(
   ({
     text,
@@ -12,12 +13,16 @@ const ModalReview = memo(
   }) => {
     useEffect(() => {
       modalAnimation();
-    }, []);
+    }, [modalAnimation]);
 
     return (
       <div className={s.modal}>
         <div className={s.review} ref={modalRef}>
-          <button className={s.closeBtn} onClick={() => setIsModal(false)}>
+          <button
+            type="button"
+            className={s.closeBtn}
+            onClick={() => setIsModal(false)}
+          >
             <img src="/reviews/close.svg" alt="close" />
           </button>
           <p className={s.review__textblock}>{text}</p>

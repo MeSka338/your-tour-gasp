@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect, memo } from "react";
+import React, { useEffect, memo } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import s from "./SelectTour.module.scss";
@@ -6,7 +6,6 @@ import Arr from "@/utils/array";
 import Card from "@/src/components/common/Card";
 
 gsap.registerPlugin(ScrollTrigger);
-
 const SelectTour = memo(
   ({
     menuArr,
@@ -58,15 +57,15 @@ const SelectTour = memo(
               <Card
                 key={key}
                 img={`select-tour/cardTourPhoto-${item}.jpg`}
-                title={"Путешествие в горах"}
-                subtitle={"от 80 000 руб"}
+                title="Путешествие в горах"
+                subtitle="от 80 000 руб"
               />
             );
           })}
         </div>
       </section>
     );
-  }
+  },
 );
 
 export default SelectTour;

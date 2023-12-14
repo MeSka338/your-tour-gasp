@@ -30,7 +30,7 @@ const HeroContainer = memo(({ sectionRefList, scrollToAnimation }) => {
         },
         delay: 1,
         duration: 1,
-      }
+      },
     );
   }, []);
 
@@ -44,7 +44,7 @@ const HeroContainer = memo(({ sectionRefList, scrollToAnimation }) => {
         y: 0,
         duration: 1,
         delay: 2,
-      }
+      },
     );
   }, []);
 
@@ -58,7 +58,7 @@ const HeroContainer = memo(({ sectionRefList, scrollToAnimation }) => {
         y: 0,
         duration: 1,
         delay: 2,
-      }
+      },
     );
   }, []);
 
@@ -79,7 +79,7 @@ const HeroContainer = memo(({ sectionRefList, scrollToAnimation }) => {
         },
 
         duration: 1,
-      }
+      },
     );
   }, []);
 
