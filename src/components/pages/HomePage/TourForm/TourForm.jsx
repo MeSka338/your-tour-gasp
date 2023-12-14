@@ -2,7 +2,6 @@ import React, { memo } from "react";
 import s from "./TourForm.module.scss";
 import Form from "@/src/components/common/Form";
 import SectionTitleContainer from "@/src/components/common/SectionTitle/SectionTitleContainer";
-
 const TourForm = memo(({ form, formAnimation, formRef }) => {
   return (
     <section className={s.root} ref={formRef}>

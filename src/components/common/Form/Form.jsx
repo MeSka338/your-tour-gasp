@@ -1,4 +1,6 @@
 import React, { useEffect, memo } from "react";
+import Link from "next/link";
+
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import s from "./Form.module.scss";
@@ -118,16 +120,16 @@ const Form = memo(({ form, formAnimation }) => {
           <label className={s.checkbox_label} htmlFor="check" />
           <p className={s.checkbox_title}>
             Нажимая кнопку, я принимаю условия{" "}
-            <a href="/" className={s.link}>
+            <Link href="/" className={s.link}>
               Лицензионного договора
-            </a>
+            </Link>
           </p>
         </div>
         <div className={s.buttons}>
           <button className={`${s.submit} ${s.form_btn}`} type="submit">
             Найти тур
           </button>
-          <button className={`${s.reset} ${s.form_btn}`} type="reset">
+          <button type="reset" className={`${s.reset} ${s.form_btn}`}>
             Сбросить
           </button>
         </div>

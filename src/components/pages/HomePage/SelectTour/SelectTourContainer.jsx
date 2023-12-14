@@ -15,15 +15,18 @@ const SelectTourContainer = memo(({ selectTourRef }) => {
   const listRef = useRef();
   const cardsRef = useRef();
 
-  const handleChange = useCallback((key) => {
-    const arr = [...menuArr];
-    arr.forEach((item) => {
-      item.isSelect = false;
-    });
-    arr[key].isSelect = true;
+  const handleChange = useCallback(
+    (key) => {
+      const arr = [...menuArr];
+      arr.forEach((item) => {
+        item.isSelect = false;
+      });
+      arr[key].isSelect = true;
 
-    setMenuArr(arr);
-  }, []);
+      setMenuArr(arr);
+    },
+    [menuArr]
+  );
   const tourTitleAnimation = useCallback(() => {
     gsap.fromTo(
       tourTitleRef.current,
@@ -36,7 +39,7 @@ const SelectTourContainer = memo(({ selectTourRef }) => {
         clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
         duration: 1,
         ease: "power1.out",
-      },
+      }
     );
   }, []);
   const listAnimation = useCallback(() => {
@@ -52,7 +55,7 @@ const SelectTourContainer = memo(({ selectTourRef }) => {
           each: 0.2,
           // ease: "power1.out",
         },
-      },
+      }
     );
   }, []);
   const cardsAnimation = useCallback(() => {
@@ -71,7 +74,7 @@ const SelectTourContainer = memo(({ selectTourRef }) => {
           each: 0.1,
           ease: "power1.out",
         },
-      },
+      }
     );
   }, []);
   return (
