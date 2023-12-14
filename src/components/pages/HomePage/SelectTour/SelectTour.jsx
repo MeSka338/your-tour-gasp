@@ -12,7 +12,7 @@ const SelectTour = memo(
     menuArr,
     tourTitleRef,
     listRef,
-    onChage,
+    onChange,
     tourTitleAnimation,
     listAnimation,
     cardsRef,
@@ -44,7 +44,7 @@ const SelectTour = memo(
                       ? `${s.selectTourMenuLink} ${s.active}`
                       : `${s.selectTourMenuLink}`
                   }
-                  onClick={() => onChage(key)}
+                  onClick={() => onChange(key)}
                 >
                   {item.title}
                 </a>
