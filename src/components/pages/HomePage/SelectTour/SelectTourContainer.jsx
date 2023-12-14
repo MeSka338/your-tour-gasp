@@ -1,4 +1,4 @@
-import React, { memo, useRef, useState } from "react";
+import React, { memo, useCallback, useRef, useState } from "react";
 import SelectTour from "./SelectTour";
 import gsap from "gsap";
 
@@ -15,7 +15,7 @@ const SelectTourContainer = memo(({ selectTourRef }) => {
   const listRef = useRef();
   const cardsRef = useRef();
 
-  const handleChange = (key) => {
+  const handleChange = useCallback((key) => {
     let arr = [...menuArr];
     arr.forEach((item) => {
       item.isSelect = false;
@@ -23,8 +23,8 @@ const SelectTourContainer = memo(({ selectTourRef }) => {
     arr[key].isSelect = true;
 
     setMenuArr(arr);
-  };
-  const tourTitleAnimation = () => {
+  }, []);
+  const tourTitleAnimation = useCallback(() => {
     gsap.fromTo(
       tourTitleRef.current,
       {
@@ -38,8 +38,8 @@ const SelectTourContainer = memo(({ selectTourRef }) => {
         ease: "power1.out",
       }
     );
-  };
-  const listAnimation = () => {
+  }, []);
+  const listAnimation = useCallback(() => {
     gsap.fromTo(
       listRef.current.children,
       {
@@ -54,8 +54,8 @@ const SelectTourContainer = memo(({ selectTourRef }) => {
         },
       }
     );
-  };
-  const cardsAnimation = () => {
+  }, []);
+  const cardsAnimation = useCallback(() => {
     gsap.fromTo(
       cardsRef.current.children,
       {
@@ -73,7 +73,7 @@ const SelectTourContainer = memo(({ selectTourRef }) => {
         },
       }
     );
-  };
+  }, []);
   return (
     <SelectTour
       menuArr={menuArr}

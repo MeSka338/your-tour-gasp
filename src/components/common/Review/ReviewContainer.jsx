@@ -1,4 +1,4 @@
-import React, { memo, useEffect, useRef, useState } from "react";
+import React, { memo, useCallback, useEffect, useRef, useState } from "react";
 import Review from "./Review";
 import gsap from "gsap";
 
@@ -6,7 +6,7 @@ const ReviewContainer = memo(({ text, name, tourType, profileImg }) => {
   const textRef = useRef();
   const [click, setClick] = useState(false);
   const [isModal, setIsModal] = useState(false);
-  const reviewAnimation = () => {
+  const reviewAnimation = useCallback(() => {
     setClick(!click);
     if (click === true) {
       gsap.to(
@@ -27,7 +27,7 @@ const ReviewContainer = memo(({ text, name, tourType, profileImg }) => {
         }
       );
     }
-  };
+  }, []);
 
   useEffect(() => {
     reviewAnimation();
