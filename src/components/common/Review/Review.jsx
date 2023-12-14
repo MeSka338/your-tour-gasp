@@ -1,14 +1,15 @@
-import React, { memo, useEffect } from "react";
-import Link from "next/link";
-import s from "./Review.module.scss";
-import ModalReviewContainer from "../ModalReview/ModalReviewContainer";
+import React, { memo, useEffect } from 'react';
+import Link from 'next/link';
+import s from './Review.module.scss';
+import ModalReviewContainer from '../ModalReview/ModalReviewContainer';
+
 const Review = memo(
   ({ text, name, tourType, profileImg, textRef, isModal, setIsModal }) => {
     useEffect(() => {
       if (isModal) {
-        document.body.style.overflow = "hidden";
+        document.body.style.overflow = 'hidden';
       } else {
-        document.body.style.overflow = "auto";
+        document.body.style.overflow = 'auto';
       }
     }, [isModal]);
 
@@ -24,13 +25,13 @@ const Review = memo(
           />
         )}
         <Link
-          href={"#review"}
+          href="#review"
           className={s.review}
           ref={textRef}
           onClick={() => setIsModal(true)}
         >
           <p className={s.reviewTextblock}>
-            {text.split(" ").slice(0, 20).join(" ") + "..."}
+            {`${text.split(' ').slice(0, 20).join(' ')}...`}
           </p>
 
           <div className={s.profile}>
@@ -38,7 +39,11 @@ const Review = memo(
               <h3 className={s.profileName}>{name}</h3>
               <div className={s.profileTour}>Тур: {tourType}</div>
             </div>
-            <img src={profileImg} alt={name} className={s.profileImg} />
+            <img
+              src={profileImg}
+              alt={name}
+              className={s.profileImg}
+            />
           </div>
         </Link>
       </>

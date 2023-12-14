@@ -1,41 +1,44 @@
-import React, { memo, useCallback, useRef, useState } from "react";
-import SelectTour from "./SelectTour";
-import gsap from "gsap";
+import React, { memo, useCallback, useRef, useState } from 'react';
+import gsap from 'gsap';
+import SelectTour from './SelectTour';
 
 const SelectTourContainer = memo(({ selectTourRef }) => {
   const [menuArr, setMenuArr] = useState([
-    { title: "Популярные", isSelect: true },
-    { title: "Авторские", isSelect: false },
-    { title: "Походы", isSelect: false },
-    { title: "Сплавы", isSelect: false },
-    { title: "Велопрогулки", isSelect: false },
+    { title: 'Популярные', isSelect: true },
+    { title: 'Авторские', isSelect: false },
+    { title: 'Походы', isSelect: false },
+    { title: 'Сплавы', isSelect: false },
+    { title: 'Велопрогулки', isSelect: false },
   ]);
 
   const tourTitleRef = useRef();
   const listRef = useRef();
   const cardsRef = useRef();
 
-  const handleChange = useCallback((key) => {
-    let arr = [...menuArr];
-    arr.forEach((item) => {
-      item.isSelect = false;
-    });
-    arr[key].isSelect = true;
+  const handleChange = useCallback(
+    key => {
+      const arr = [...menuArr];
+      arr.forEach(item => {
+        item.isSelect = false;
+      });
+      arr[key].isSelect = true;
 
-    setMenuArr(arr);
-  }, []);
+      setMenuArr(arr);
+    },
+    [menuArr]
+  );
   const tourTitleAnimation = useCallback(() => {
     gsap.fromTo(
       tourTitleRef.current,
       {
-        clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)",
+        clipPath: 'polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)',
       },
       {
         scrollTrigger: listRef.current,
 
-        clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+        clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
         duration: 1,
-        ease: "power1.out",
+        ease: 'power1.out',
       }
     );
   }, []);
@@ -64,12 +67,12 @@ const SelectTourContainer = memo(({ selectTourRef }) => {
       {
         scrollTrigger: {
           trigger: cardsRef.current,
-          start: "top center",
+          start: 'top center',
         },
         scale: 1,
         stagger: {
           each: 0.1,
-          ease: "power1.out",
+          ease: 'power1.out',
         },
       }
     );

@@ -1,18 +1,19 @@
-import React, { useEffect } from "react";
-import HomeContainer from "../components/pages/HomePage/HomeContainer";
+import React, { useEffect } from 'react';
+import HomeContainer from '../components/pages/HomePage/HomeContainer';
 
-export default function HomePage() {
+const HomePage = () => {
   useEffect(() => {
     (async () => {
-      const LocomotiveScroll = (await import("locomotive-scroll")).default;
+      const LocomotiveScroll = (await import('locomotive-scroll')).default;
+      // eslint-disable-next-line unused-imports/no-unused-vars
       const locomotiveScroll = new LocomotiveScroll();
     })();
   }, []);
   return (
-    <>
-      <main>
-        <HomeContainer />
-      </main>
-    </>
+    <main>
+      <HomeContainer />
+    </main>
   );
-}
+};
+
+export default HomePage;

@@ -1,6 +1,6 @@
-import React, { useRef, useState } from "react";
-import gsap from "gsap";
-import TravelPhoto from ".";
+import React, { useRef, useState } from 'react';
+import gsap from 'gsap';
+import TravelPhoto from '.';
 
 const TravelPhotoContainer = () => {
   const gallery1Ref = useRef();
@@ -12,19 +12,19 @@ const TravelPhotoContainer = () => {
   const margin = istablet ? 4 : 7;
   const duration = 30;
 
-  const galleryAnimation = (gallery_Ref, toLeft) => {
-    let refWidth = gallery_Ref.current.clientWidth;
+  const galleryAnimation = (galleryRef, toLeft) => {
+    const refWidth = galleryRef.current.clientWidth;
 
     gsap.fromTo(
-      gallery_Ref.current,
+      galleryRef.current,
       {
         x: toLeft ? refWidth / 4 + margin : -refWidth / 4 - margin,
       },
       {
-        duration: duration,
+        duration,
         x: toLeft ? -refWidth / 4 - margin : refWidth / 4 + margin,
         repeat: -1,
-        ease: "none",
+        ease: 'none',
       }
     );
   };

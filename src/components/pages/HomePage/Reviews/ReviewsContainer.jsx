@@ -1,5 +1,4 @@
-import React, { memo, useRef, useState } from "react";
-import gsap from "gsap";
+import React, { memo } from "react";
 import Reviews from "./Reviews";
 
 const ReviewsContainer = memo(({ reviewsRef }) => {

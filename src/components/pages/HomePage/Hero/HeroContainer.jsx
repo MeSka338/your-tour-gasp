@@ -1,7 +1,7 @@
-import React, { memo, useCallback, useRef, useState } from "react";
-import gsap from "gsap";
-import ScrollToPlugin from "gsap/dist/ScrollToPlugin";
-import Hero from ".";
+import React, { memo, useCallback, useRef, useState } from 'react';
+import gsap from 'gsap';
+import ScrollToPlugin from 'gsap/dist/ScrollToPlugin';
+import Hero from '.';
 
 gsap.registerPlugin(ScrollToPlugin);
 
@@ -22,11 +22,11 @@ const HeroContainer = memo(({ sectionRefList, scrollToAnimation }) => {
       },
       {
         y: 0,
-        ease: "power1.easeOut",
+        ease: 'power1.easeOut',
         opacity: 1,
         stagger: {
           each: 0.2,
-          from: "start",
+          from: 'start',
         },
         delay: 1,
         duration: 1,
@@ -71,11 +71,11 @@ const HeroContainer = memo(({ sectionRefList, scrollToAnimation }) => {
       },
       {
         x: 0,
-        ease: "power1.easeOut",
+        ease: 'power1.easeOut',
         opacity: 1,
         stagger: {
           each: 0.4,
-          from: "start",
+          from: 'start',
         },
 
         duration: 1,

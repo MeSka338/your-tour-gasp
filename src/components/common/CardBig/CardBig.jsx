@@ -1,13 +1,20 @@
-import React, { memo } from "react";
-import s from "./CardBig.module.scss";
-import BtnSec from "../BtnSec";
+import React, { memo } from 'react';
+import Link from 'next/link';
+
+import s from './CardBig.module.scss';
+
+import BtnSec from '../BtnSec';
 
 const CardBig = memo(({ img, title, subtitle, subtitbleList, socials }) => {
   return (
     <div className={s.cardContainerBig}>
       <div className={s.cardBig}>
-        <img className={s.cardBg} src={img} alt="cardBg" />
-        <div className={s.grad2}></div>
+        <img
+          className={s.cardBg}
+          src={img}
+          alt="cardBg"
+        />
+        <div className={s.grad2} />
         <div className={s.cardBigContentd2}>
           <h3 className={s.cradBigTitle}>{title}</h3>
           <p className={s.cardBigSubtitle}>{subtitle}</p>
@@ -21,11 +28,15 @@ const CardBig = memo(({ img, title, subtitle, subtitbleList, socials }) => {
           <BtnSec />
           <div className={s.cardSocials}>
             {socials &&
-              socials.map((item, key) => {
+              socials.map(item => {
                 return (
-                  <a href="/" key={key} className={s.socialsItem}>
+                  <Link
+                    href="/"
+                    key={item}
+                    className={s.socialsItem}
+                  >
                     {item}
-                  </a>
+                  </Link>
                 );
               })}
           </div>

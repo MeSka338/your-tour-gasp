@@ -1,6 +1,6 @@
-import React, { memo, useCallback, useEffect, useRef, useState } from "react";
-import Review from "./Review";
-import gsap from "gsap";
+import React, { memo, useCallback, useEffect, useRef, useState } from 'react';
+import gsap from 'gsap';
+import Review from './Review';
 
 const ReviewContainer = memo(({ text, name, tourType, profileImg }) => {
   const textRef = useRef();
@@ -13,7 +13,7 @@ const ReviewContainer = memo(({ text, name, tourType, profileImg }) => {
         textRef.current,
 
         {
-          position: "absolute",
+          position: 'absolute',
 
           zIndex: 10000,
         }
@@ -23,15 +23,15 @@ const ReviewContainer = memo(({ text, name, tourType, profileImg }) => {
         textRef.current,
 
         {
-          position: "auto",
+          position: 'auto',
         }
       );
     }
-  }, []);
+  }, [click]);
 
   useEffect(() => {
     reviewAnimation();
-  }, []);
+  }, [reviewAnimation]);
 
   return (
     <Review

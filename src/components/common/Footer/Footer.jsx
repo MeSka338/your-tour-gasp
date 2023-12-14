@@ -1,7 +1,9 @@
-import React, { memo, useEffect } from "react";
-import gsap from "gsap";
-import ScrollTrigger from "gsap/dist/ScrollTrigger";
-import s from "./Footer.module.scss";
+import React, { memo, useEffect } from 'react';
+import Link from 'next/link';
+
+import gsap from 'gsap';
+import ScrollTrigger from 'gsap/dist/ScrollTrigger';
+import s from './Footer.module.scss';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -9,16 +11,19 @@ const Footer = memo(
   ({ footerRef, arrowRef, arrowAnimtion, heroRef, scrollToAnimation }) => {
     useEffect(() => {
       arrowAnimtion();
-    }, []);
+    }, [arrowAnimtion]);
 
     return (
-      <footer className={s.root} ref={footerRef}>
+      <footer
+        className={s.root}
+        ref={footerRef}
+      >
         <a
           className={s.arrow}
           ref={arrowRef}
           onClick={() => scrollToAnimation(heroRef)}
         >
-          <span className={s.arrowIcon}></span>
+          <span className={s.arrowIcon} />
         </a>
         <div className={s.footerContainer}>
           <img
@@ -31,10 +36,13 @@ const Footer = memo(
             <p className={s.footerSubtitle}>
               Напиши на почту и узнай подробности
               <br />
-              на{" "}
-              <a href="/" className={s.link}>
+              на{' '}
+              <Link
+                href="/"
+                className={s.link}
+              >
                 yourtour@gmail.com
-              </a>
+              </Link>
             </p>
           </div>
         </div>
@@ -48,9 +56,12 @@ const Footer = memo(
                   src="/footer/instagram-icon.png"
                   alt=""
                 />
-                <a href="/" className={s.socialsTitle}>
+                <Link
+                  href="/"
+                  className={s.socialsTitle}
+                >
                   instagram
-                </a>
+                </Link>
               </div>
 
               <div className={`${s.contactsItem} ${s.socials__item}`}>
@@ -59,9 +70,12 @@ const Footer = memo(
                   src="/footer/facebook-icon.png"
                   alt=""
                 />
-                <a href="/" className={s.socialsTitle}>
+                <Link
+                  href="/"
+                  className={s.socialsTitle}
+                >
                   facebook
-                </a>
+                </Link>
               </div>
 
               <div className={`${s.contactsItem} ${s.socials__item}`}>
@@ -70,9 +84,12 @@ const Footer = memo(
                   src="/footer/vk-icon.png"
                   alt=""
                 />
-                <a href="/" className={s.socialsTitle}>
+                <Link
+                  href="/"
+                  className={s.socialsTitle}
+                >
                   vkontakte
-                </a>
+                </Link>
               </div>
             </div>
           </div>

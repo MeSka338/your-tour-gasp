@@ -1,15 +1,15 @@
-import React, { useState, useEffect, memo } from "react";
-import s from "./Home.module.scss";
+import React, { memo } from 'react';
+import Head from 'next/head';
+import s from './Home.module.scss';
 
-import Stories from "./Stories";
-import Head from "next/head";
-import CustomCursor from "../../common/CustomCursor";
-import HeroContainer from "./Hero/HeroContainer";
-import SelectTourContainer from "./SelectTour/SelectTourContainer";
-import TourFormContainer from "./TourForm/TourFormContainer";
-import ReviewsContainer from "./Reviews/ReviewsContainer";
-import TravelPhotoContainer from "./TravelPhoto/TravelPhotoContainer";
-import FooterContainer from "../../common/Footer/FooterContainer";
+import Stories from './Stories';
+import CustomCursor from '../../common/CustomCursor';
+import HeroContainer from './Hero/HeroContainer';
+import SelectTourContainer from './SelectTour/SelectTourContainer';
+import TourFormContainer from './TourForm/TourFormContainer';
+import ReviewsContainer from './Reviews/ReviewsContainer';
+import TravelPhotoContainer from './TravelPhoto/TravelPhotoContainer';
+import FooterContainer from '../../common/Footer/FooterContainer';
 
 const Home = memo(
   ({
@@ -32,9 +32,18 @@ const Home = memo(
       <>
         <Head>
           <title>YourTour</title>
-          <meta name="description" content="Сайт про путешествие" />
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <link rel="icon" href="/YT-main-icon.svg" />
+          <meta
+            name="description"
+            content="Сайт про путешествие"
+          />
+          <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1"
+          />
+          <link
+            rel="icon"
+            href="/YT-main-icon.svg"
+          />
         </Head>
         <main className={s.root}>
           <CustomCursor

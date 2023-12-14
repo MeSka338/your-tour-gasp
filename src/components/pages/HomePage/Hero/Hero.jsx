@@ -1,7 +1,7 @@
-import React, { memo, useEffect } from "react";
-import s from "./Hero.module.scss";
-import BtnMain from "@/src/components/common/BtnMain";
-import Header from "@/src/components/common/Header";
+import React, { memo, useEffect } from 'react';
+import s from './Hero.module.scss';
+import BtnMain from '@/src/components/common/BtnMain';
+import Header from '@/src/components/common/Header';
 
 const Hero = memo(
   ({
@@ -23,7 +23,7 @@ const Hero = memo(
       headerAnimation();
       buttonAnimation();
       subtitleAnimation();
-    }, []);
+    }, [buttonAnimation, headerAnimation, subtitleAnimation]);
     return (
       <>
         <Header
@@ -34,22 +34,26 @@ const Hero = memo(
           scrollToAnimation={scrollToAnimation}
           sectionRefList={sectionRefList}
         />
-        <div className={s.root} id="hero" ref={sectionRefList.hero}>
+        <div
+          className={s.root}
+          id="hero"
+          ref={sectionRefList.hero}
+        >
           <div className={s.hero}>
             <div
               className={s.hero__title}
               ref={heraderRef}
-              style={{ overflow: "hidden" }}
+              style={{ overflow: 'hidden' }}
               data-scroll
               data-scroll-speed="0.2"
             >
-              <div style={{ overflow: "hidden" }}>
+              <div style={{ overflow: 'hidden' }}>
                 <h1>Идеальные</h1>
               </div>
-              <div style={{ overflow: "hidden" }}>
+              <div style={{ overflow: 'hidden' }}>
                 <h1>путешествия</h1>
               </div>
-              <div style={{ overflow: "hidden" }}>
+              <div style={{ overflow: 'hidden' }}>
                 <h1>существуют</h1>
               </div>
             </div>
@@ -58,7 +62,10 @@ const Hero = memo(
               data-scroll-speed="0.15"
               className={s.heroSubtitleWrapper}
             >
-              <p className={s.heroSubtitle} ref={subtitleRef}>
+              <p
+                className={s.heroSubtitle}
+                ref={subtitleRef}
+              >
                 Идейные соображения высшего порядка, a также рамки и место
                 обучения кадров
               </p>
@@ -66,7 +73,7 @@ const Hero = memo(
 
             <div
               ref={buttonRef}
-              style={{ overflow: "hidden" }}
+              style={{ overflow: 'hidden' }}
               data-scroll
               data-scroll-speed="0.1"
             >
