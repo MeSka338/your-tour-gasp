@@ -1,5 +1,5 @@
-import React, { memo } from "react";
-import Reviews from "./Reviews";
+import React, { memo } from 'react';
+import Reviews from './Reviews';
 
 const ReviewsContainer = memo(({ reviewsRef }) => {
   return <Reviews reviewsRef={reviewsRef} />;

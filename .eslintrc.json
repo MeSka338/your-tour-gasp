@@ -44,6 +44,12 @@
     "react/forbid-prop-types": "off",
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
+    "react/button-has-type": [
+      "error",
+      {
+        "reset": true
+      }
+    ],
     "@next/next/no-img-element": "off",
     "import/no-cycle": "off",
     "import/no-unresolved": "off",
