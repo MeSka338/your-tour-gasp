@@ -40,36 +40,40 @@ const SelectTour = memo(
           ref={listRef}
           style={{ overflow: 'hidden' }}
         >
-          {menuArr.map((item, key) => (
-            <li
-              className={s.selectTourMenuItem}
-              key={item}
-            >
-              <a
-                className={
-                  item.isSelect
-                    ? `${s.selectTourMenuLink} ${s.active}`
-                    : `${s.selectTourMenuLink}`
-                }
-                onClick={() => onChange(key)}
+          {menuArr.map((item, key) => {
+            return (
+              <li
+                className={s.selectTourMenuItem}
+                key={item}
               >
-                {item.title}
-              </a>
-            </li>
-          ))}
+                <a
+                  className={
+                    item.isSelect
+                      ? `${s.selectTourMenuLink} ${s.active}`
+                      : `${s.selectTourMenuLink}`
+                  }
+                  onClick={() => onChange(key)}
+                >
+                  {item.title}
+                </a>
+              </li>
+            );
+          })}
         </ul>
         <div
           className={s.selectTourOptions}
           ref={cardsRef}
         >
-          {Arr(6, 1).map(item => (
-            <Card
-              key={item}
-              img={`select-tour/cardTourPhoto-${item}.jpg`}
-              title="Путешествие в горах"
-              subtitle="от 80 000 руб"
-            />
-          ))}
+          {Arr(6, 1).map(item => {
+            return (
+              <Card
+                key={item}
+                img={`select-tour/cardTourPhoto-${item}.jpg`}
+                title="Путешествие в горах"
+                subtitle="от 80 000 руб"
+              />
+            );
+          })}
         </div>
       </section>
     );

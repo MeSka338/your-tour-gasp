@@ -18,13 +18,13 @@ const Footer = memo(
         className={s.root}
         ref={footerRef}
       >
-        <Link
+        <a
           className={s.arrow}
           ref={arrowRef}
           onClick={() => scrollToAnimation(heroRef)}
         >
           <span className={s.arrowIcon} />
-        </Link>
+        </a>
         <div className={s.footerContainer}>
           <img
             src="/footer/footer photo.jpg"

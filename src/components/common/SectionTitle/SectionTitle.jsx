@@ -6,14 +6,16 @@ import s from './SectionTitle.module.scss';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const SectionTitle = memo(({ title, subtitle, titleRef }) => (
-  <div
-    className={s.root}
-    ref={titleRef}
-  >
-    <h2 className={s.storiesTitle}>{title}</h2>
-    <p className={s.storiesSubtitle}>{subtitle}</p>
-  </div>
-));
+const SectionTitle = memo(({ title, subtitle, titleRef }) => {
+  return (
+    <div
+      className={s.root}
+      ref={titleRef}
+    >
+      <h2 className={s.storiesTitle}>{title}</h2>
+      <p className={s.storiesSubtitle}>{subtitle}</p>
+    </div>
+  );
+});
 
 export default SectionTitle;

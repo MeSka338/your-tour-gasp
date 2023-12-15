@@ -27,54 +27,56 @@ const Home = memo(
     arrowAnimtion,
 
     scrollToAnimation,
-  }) => (
-    <>
-      <Head>
-        <title>YourTour</title>
-        <meta
-          name="description"
-          content="Сайт про путешествие"
-        />
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1"
-        />
-        <link
-          rel="icon"
-          href="/YT-main-icon.svg"
-        />
-      </Head>
-      <main className={s.root}>
-        <CustomCursor
-          rootRef={rootRef}
-          cursoreMove={cursoreMove}
-          scaleAnimation={scaleAnimation}
-        />
+  }) => {
+    return (
+      <>
+        <Head>
+          <title>YourTour</title>
+          <meta
+            name="description"
+            content="Сайт про путешествие"
+          />
+          <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1"
+          />
+          <link
+            rel="icon"
+            href="/YT-main-icon.svg"
+          />
+        </Head>
+        <main className={s.root}>
+          <CustomCursor
+            rootRef={rootRef}
+            cursoreMove={cursoreMove}
+            scaleAnimation={scaleAnimation}
+          />
 
-        <HeroContainer
-          sectionRefList={sectionRefList}
-          scrollToAnimation={scrollToAnimation}
-        />
-        <SelectTourContainer selectTourRef={sectionRefList.selectTour} />
-        <TourFormContainer formRef={sectionRefList.form} />
-        <ReviewsContainer reviewsRef={sectionRefList.reviews} />
-        <TravelPhotoContainer />
-        <Stories
-          // sectionTitle
-          titleRef={titleRef}
-          titleAnimation={titleAnimation}
-          storiesRef={sectionRefList.stories}
-        />
-        <FooterContainer
-          footerRef={footerRef}
-          arrowRef={arrowRef}
-          arrowAnimtion={arrowAnimtion}
-          heroRef={sectionRefList.hero}
-          scrollToAnimation={scrollToAnimation}
-        />
-      </main>
-    </>
-  )
+          <HeroContainer
+            sectionRefList={sectionRefList}
+            scrollToAnimation={scrollToAnimation}
+          />
+          <SelectTourContainer selectTourRef={sectionRefList.selectTour} />
+          <TourFormContainer formRef={sectionRefList.form} />
+          <ReviewsContainer reviewsRef={sectionRefList.reviews} />
+          <TravelPhotoContainer />
+          <Stories
+            // sectionTitle
+            titleRef={titleRef}
+            titleAnimation={titleAnimation}
+            storiesRef={sectionRefList.stories}
+          />
+          <FooterContainer
+            footerRef={footerRef}
+            arrowRef={arrowRef}
+            arrowAnimtion={arrowAnimtion}
+            heroRef={sectionRefList.hero}
+            scrollToAnimation={scrollToAnimation}
+          />
+        </main>
+      </>
+    );
+  }
 );
 
 export default Home;

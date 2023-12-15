@@ -1,1 +1,1 @@
-export { default } from './SectionTitleContainer';
+export { default } from './SectionTitle';

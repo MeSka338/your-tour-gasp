@@ -80,13 +80,15 @@ const TravelPhoto = memo(
 
 export default TravelPhoto;
 
-const Images = memo(({ count, start, small }) =>
-  Arr(count, start).map(item => (
-    <img
-      src={`/travel-photo/travel photo-${item}.jpg`}
-      alt={item}
-      key={item}
-      className={small ? `${s.photoSmall}` : `${s.photo}`}
-    />
-  ))
-);
+const Images = memo(({ count, start, small }) => {
+  return Arr(count, start).map(item => {
+    return (
+      <img
+        src={`/travel-photo/travel photo-${item}.jpg`}
+        alt={item}
+        key={item}
+        className={small ? `${s.photoSmall}` : `${s.photo}`}
+      />
+    );
+  });
+});

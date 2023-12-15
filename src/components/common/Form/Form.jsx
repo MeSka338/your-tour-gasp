@@ -163,8 +163,8 @@ const Form = memo(({ form, formAnimation }) => {
             Найти тур
           </button>
           <button
-            type="reset"
             className={`${s.reset} ${s.form_btn}`}
+            type="reset"
           >
             Сбросить
           </button>

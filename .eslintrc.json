@@ -44,38 +44,17 @@
     "react/forbid-prop-types": "off",
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
-    "react/button-has-type": [
-      "error",
-      {
-        "submit": true,
-        "reset": true
-      }
-    ],
-    "prettier/prettier": [
-      "error",
-      {
-        "bracketSpacing": true,
-        "singleAttributePerLine": true,
-        "singleQuote": true,
-        "trailingComma": "es5",
-        "tabWidth": 2,
-        "semi": true,
-        "arrowParens": "avoid"
-      }
-    ],
-
     "@next/next/no-img-element": "off",
     "import/no-cycle": "off",
     "import/no-unresolved": "off",
     "import/prefer-default-export": "off",
+    "import/extensions": "off",
     "import/no-extraneous-dependencies": [
       "error",
-
       {
         "devDependencies": true
       }
     ],
-    "import/extensions": "off",
     "jsx-a11y/no-static-element-interactions": "off",
     "jsx-a11y/click-events-have-key-events": "off",
     "jsx-a11y/anchor-is-valid": "off",
@@ -99,6 +78,18 @@
         "varsIgnorePattern": "^_",
         "args": "after-used",
         "argsIgnorePattern": "^_"
+      }
+    ],
+    "prettier/prettier": [
+      "error",
+      {
+        "bracketSpacing": true,
+        "singleAttributePerLine": true,
+        "singleQuote": true,
+        "trailingComma": "es5",
+        "tabWidth": 2,
+        "semi": true,
+        "arrowParens": "avoid"
       }
     ]
   }
