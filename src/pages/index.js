@@ -1,16 +1,6 @@
-import React, { useEffect } from "react";
-import HomeContainer from "../components/pages/HomePage/HomeContainer";
+import React from 'react';
+import HomeContainer from '../components/pages/HomePage/HomeContainer';
 
-export default function HomePage() {
-  useEffect(() => {
-    (async () => {
-      const LocomotiveScroll = (await import("locomotive-scroll")).default;
-      const locomotiveScroll = new LocomotiveScroll();
-    })();
-  }, []);
-  return (
-    <main>
-      <HomeContainer />
-    </main>
-  );
-}
+const HomePage = () => <HomeContainer />;
+
+export default HomePage;

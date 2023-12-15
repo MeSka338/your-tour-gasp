@@ -1,9 +1,9 @@
-import React, { memo, useEffect } from "react";
-import Link from "next/link";
+import React, { memo, useEffect } from 'react';
+import Link from 'next/link';
 
-import gsap from "gsap";
-import ScrollTrigger from "gsap/dist/ScrollTrigger";
-import s from "./Footer.module.scss";
+import gsap from 'gsap';
+import ScrollTrigger from 'gsap/dist/ScrollTrigger';
+import s from './Footer.module.scss';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -14,7 +14,10 @@ const Footer = memo(
     }, [arrowAnimtion]);
 
     return (
-      <footer className={s.root} ref={footerRef}>
+      <footer
+        className={s.root}
+        ref={footerRef}
+      >
         <Link
           className={s.arrow}
           ref={arrowRef}
@@ -33,8 +36,11 @@ const Footer = memo(
             <p className={s.footerSubtitle}>
               Напиши на почту и узнай подробности
               <br />
-              на{" "}
-              <Link href="/" className={s.link}>
+              на{' '}
+              <Link
+                href="/"
+                className={s.link}
+              >
                 yourtour@gmail.com
               </Link>
             </p>
@@ -50,7 +56,10 @@ const Footer = memo(
                   src="/footer/instagram-icon.png"
                   alt=""
                 />
-                <Link href="/" className={s.socialsTitle}>
+                <Link
+                  href="/"
+                  className={s.socialsTitle}
+                >
                   instagram
                 </Link>
               </div>
@@ -61,7 +70,10 @@ const Footer = memo(
                   src="/footer/facebook-icon.png"
                   alt=""
                 />
-                <Link href="/" className={s.socialsTitle}>
+                <Link
+                  href="/"
+                  className={s.socialsTitle}
+                >
                   facebook
                 </Link>
               </div>
@@ -72,7 +84,10 @@ const Footer = memo(
                   src="/footer/vk-icon.png"
                   alt=""
                 />
-                <Link href="/" className={s.socialsTitle}>
+                <Link
+                  href="/"
+                  className={s.socialsTitle}
+                >
                   vkontakte
                 </Link>
               </div>

@@ -1,1 +1,1 @@
-export { default } from "./SelectTour";
+export { default } from './SelectTour';

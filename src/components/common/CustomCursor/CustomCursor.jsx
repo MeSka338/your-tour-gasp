@@ -1,6 +1,6 @@
-import React, { useEffect, memo } from "react";
-import gsap from "gsap";
-import s from "./CustomCursor.module.scss";
+import React, { useEffect, memo } from 'react';
+import gsap from 'gsap';
+import s from './CustomCursor.module.scss';
 
 const CustomCursor = memo(({ rootRef, cursoreMove, scaleAnimation }) => {
   useEffect(() => {
@@ -11,10 +11,15 @@ const CustomCursor = memo(({ rootRef, cursoreMove, scaleAnimation }) => {
 
     scaleAnimation();
 
-    window.addEventListener("mousemove", (e) => cursoreMove(e));
+    window.addEventListener('mousemove', e => cursoreMove(e));
   }, [rootRef, cursoreMove, scaleAnimation]);
 
-  return <div className={s.root} ref={rootRef} />;
+  return (
+    <div
+      className={s.root}
+      ref={rootRef}
+    />
+  );
 });
 
 export default CustomCursor;

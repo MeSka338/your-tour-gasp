@@ -1,7 +1,7 @@
-import React, { useEffect, memo } from "react";
-import Link from "next/link";
+import React, { useEffect, memo } from 'react';
+import Link from 'next/link';
 
-import s from "./Header.module.scss";
+import s from './Header.module.scss';
 
 const Header = memo(
   ({
@@ -14,7 +14,7 @@ const Header = memo(
   }) => {
     useEffect(() => {
       navAnimation();
-      window.addEventListener("scroll", updateScroll);
+      window.addEventListener('scroll', updateScroll);
     }, [navAnimation, updateScroll]);
     return (
       <header className={s.root}>
@@ -24,16 +24,22 @@ const Header = memo(
               ? `${s.headerNavWrapper} ${s.fixed}`
               : `${s.headerNavWrapper} `
           }
-          style={{ overflow: "hidden" }}
+          style={{ overflow: 'hidden' }}
         >
-          <nav className={s.headerNav} ref={navRef}>
+          <nav
+            className={s.headerNav}
+            ref={navRef}
+          >
             <div className={s.logo}>
-              <Link href="/" className={s.logoHref}>
+              <Link
+                href="/"
+                className={s.logoHref}
+              >
                 <img
                   src={
                     isFixed
-                      ? "/header/YourTour-black.svg"
-                      : "/header/YourTour-white.svg"
+                      ? '/header/YourTour-black.svg'
+                      : '/header/YourTour-white.svg'
                   }
                   alt={s.mainLogo}
                   className={s.logoImg}

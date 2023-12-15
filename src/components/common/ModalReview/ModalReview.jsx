@@ -1,5 +1,5 @@
-import React, { useEffect, memo } from "react";
-import s from "./ModalReview.module.scss";
+import React, { useEffect, memo } from 'react';
+import s from './ModalReview.module.scss';
 
 const ModalReview = memo(
   ({
@@ -17,13 +17,19 @@ const ModalReview = memo(
 
     return (
       <div className={s.modal}>
-        <div className={s.review} ref={modalRef}>
+        <div
+          className={s.review}
+          ref={modalRef}
+        >
           <button
             type="button"
             className={s.closeBtn}
             onClick={() => setIsModal(false)}
           >
-            <img src="/reviews/close.svg" alt="close" />
+            <img
+              src="/reviews/close.svg"
+              alt="close"
+            />
           </button>
           <p className={s.review__textblock}>{text}</p>
 
@@ -32,7 +38,11 @@ const ModalReview = memo(
               <h3 className={s.profileName}>{name}</h3>
               <div className={s.profileTour}>Тур: {tourType}</div>
             </div>
-            <img src={profileImg} alt={name} className={s.profileImg} />
+            <img
+              src={profileImg}
+              alt={name}
+              className={s.profileImg}
+            />
           </div>
         </div>
       </div>

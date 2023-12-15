@@ -1,12 +1,16 @@
-import React, { memo } from "react";
-import s from "./Reviews.module.scss";
+import React, { memo } from 'react';
+import s from './Reviews.module.scss';
 
-import reviewData from "@/src/constants/reviewData";
-import SectionTitleContainer from "@/src/components/common/SectionTitle/SectionTitleContainer";
-import ReviewContainer from "@/src/components/common/Review/ReviewContainer";
+import reviewData from '@/src/constants/reviewData';
+import SectionTitleContainer from '@/src/components/common/SectionTitle/SectionTitleContainer';
+import ReviewContainer from '@/src/components/common/Review/ReviewContainer';
 
 const Reviews = memo(({ reviewsRef, modalAnimation, modalRef }) => (
-  <section className={s.root} id="review" ref={reviewsRef}>
+  <section
+    className={s.root}
+    id="review"
+    ref={reviewsRef}
+  >
     <div className={s.reviwesTitle}>
       <SectionTitleContainer
         title="Отзывы наших путешественников"
@@ -15,9 +19,9 @@ const Reviews = memo(({ reviewsRef, modalAnimation, modalRef }) => (
     </div>
 
     <div className={s.reviewWrapper}>
-      {reviewData.map((item, key) => (
+      {reviewData.map(item => (
         <ReviewContainer
-          key={key}
+          key={item}
           text={item.text}
           name={item.name}
           tourType={item.tourType}

@@ -1,1 +1,1 @@
-export { default } from "./CardBig";
+export { default } from './CardBig';

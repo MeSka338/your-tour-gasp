@@ -1,6 +1,6 @@
-import React, { memo, useCallback, useRef } from "react";
-import gsap from "gsap";
-import ModalReview from "./ModalReview";
+import React, { memo, useCallback, useRef } from 'react';
+import gsap from 'gsap';
+import ModalReview from './ModalReview';
 
 const ModalReviewContainer = memo(
   ({ text, profileImg, name, tourType, setIsModal }) => {
@@ -11,15 +11,15 @@ const ModalReviewContainer = memo(
         modalRef.current,
         {
           scale: 0,
-          rotate: "-90deg",
+          rotate: '-90deg',
         },
         {
           duration: 1,
           scale: 1,
-          rotate: "0",
-          width: "auto",
-          height: "auto",
-        },
+          rotate: '0',
+          width: 'auto',
+          height: 'auto',
+        }
       );
     }, []);
 
@@ -34,7 +34,7 @@ const ModalReviewContainer = memo(
         setIsModal={setIsModal}
       />
     );
-  },
+  }
 );
 
 export default ModalReviewContainer;

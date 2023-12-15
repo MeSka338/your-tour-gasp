@@ -1,6 +1,6 @@
-import React, { memo, useCallback, useEffect, useRef } from "react";
-import gsap from "gsap";
-import SectionTitle from "./SectionTitle";
+import React, { memo, useCallback, useEffect, useRef } from 'react';
+import gsap from 'gsap';
+import SectionTitle from './SectionTitle';
 
 const SectionTitleContainer = memo(({ title, subtitle }) => {
   const titleRef = useRef();
@@ -8,21 +8,27 @@ const SectionTitleContainer = memo(({ title, subtitle }) => {
     gsap.fromTo(
       titleRef.current,
       {
-        clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)",
+        clipPath: 'polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)',
       },
       {
         scrollTrigger: titleRef.current,
 
-        clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+        clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
         duration: 1,
-        ease: "power1.out",
+        ease: 'power1.out',
       }
     );
   }, []);
   useEffect(() => {
     titleAnimation();
   }, [titleAnimation]);
-  return <SectionTitle title={title} subtitle={subtitle} titleRef={titleRef} />;
+  return (
+    <SectionTitle
+      title={title}
+      subtitle={subtitle}
+      titleRef={titleRef}
+    />
+  );
 });
 
 export default SectionTitleContainer;
