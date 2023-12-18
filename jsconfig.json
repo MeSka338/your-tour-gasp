@@ -6,8 +6,7 @@
       "pages/*": ["components/pages/*"],
       "constants/*": ["constants/*"],
       "styles/*": ["styles/*"],
-      "utils/*": ["utils/*"],
-      "public/*": ["public/*"]
+      "utils/*": ["utils/*"]
     }
   }
 }
