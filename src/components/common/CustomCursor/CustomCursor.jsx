@@ -1,5 +1,6 @@
 import React, { useEffect, memo } from 'react';
 import gsap from 'gsap';
+// import s from './CustomCursor.module.scss';
 import s from './CustomCursor.module.scss';
 
 const CustomCursor = memo(({ rootRef, cursoreMove, scaleAnimation }) => {

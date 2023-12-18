@@ -1,9 +1,10 @@
 import React, { useEffect, memo } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import Card from 'components/Card';
+import Arr from 'utils/array';
+
 import s from './SelectTour.module.scss';
-import Arr from '@/utils/array';
-import Card from '@/src/components/common/Card';
 
 gsap.registerPlugin(ScrollTrigger);
 const SelectTour = memo(

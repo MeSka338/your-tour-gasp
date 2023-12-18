@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import HomeContainer from '../components/pages/HomePage/HomeContainer';
+import HomeContainer from 'pages/HomePage/HomeContainer';
 
 const HomePage = () => {
   useEffect(() => {

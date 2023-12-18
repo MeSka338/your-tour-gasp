@@ -1,7 +1,7 @@
 import React, { memo, useEffect } from 'react';
+import BtnMain from 'components/BtnMain';
+import Header from 'components/Header';
 import s from './Hero.module.scss';
-import BtnMain from '@/src/components/common/BtnMain';
-import Header from '@/src/components/common/Header';
 
 const Hero = memo(
   ({

@@ -1,7 +1,8 @@
 import React, { memo, useEffect } from 'react';
-import Arr from '@/utils/array';
+import Arr from 'utils/array';
+import SectionTitleContainer from 'components/SectionTitle/SectionTitleContainer';
+
 import s from './TravelPhoto.module.scss';
-import SectionTitleContainer from '@/src/components/common/SectionTitle/SectionTitleContainer';
 
 const TravelPhoto = memo(
   ({

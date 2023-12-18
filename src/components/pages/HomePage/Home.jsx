@@ -1,15 +1,17 @@
 import React, { memo } from 'react';
 import Head from 'next/head';
-import s from './Home.module.scss';
+import CustomCursor from 'components/CustomCursor';
+import FooterContainer from 'components/Footer/FooterContainer';
 
+import s from './Home.module.scss';
 import Stories from './Stories';
-import CustomCursor from '../../common/CustomCursor';
 import HeroContainer from './Hero/HeroContainer';
 import SelectTourContainer from './SelectTour/SelectTourContainer';
 import TourFormContainer from './TourForm/TourFormContainer';
+// import ReviewsContainer from './Reviews/ReviewsContainer';
 import ReviewsContainer from './Reviews/ReviewsContainer';
+
 import TravelPhotoContainer from './TravelPhoto/TravelPhotoContainer';
-import FooterContainer from '../../common/Footer/FooterContainer';
 
 const Home = memo(
   ({

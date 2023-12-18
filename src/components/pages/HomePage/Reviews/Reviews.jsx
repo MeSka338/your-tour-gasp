@@ -1,9 +1,10 @@
 import React, { memo } from 'react';
-import s from './Reviews.module.scss';
 
-import reviewData from '@/src/constants/reviewData';
-import SectionTitleContainer from '@/src/components/common/SectionTitle/SectionTitleContainer';
-import ReviewContainer from '@/src/components/common/Review/ReviewContainer';
+import reviewData from 'constants/reviewData';
+import SectionTitleContainer from 'components/SectionTitle/SectionTitleContainer';
+import ReviewContainer from 'components/Review/ReviewContainer';
+
+import s from './Reviews.module.scss';
 
 const Reviews = memo(({ reviewsRef, modalAnimation, modalRef }) => (
   <section
