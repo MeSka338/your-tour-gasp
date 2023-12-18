@@ -1,6 +1,6 @@
 import React, { memo } from 'react';
+import BtnSec from 'components/BtnSec';
 import s from './Card.module.scss';
-import BtnSec from '../BtnSec';
 
 const Card = memo(({ img, title, subtitle }) => {
   return (

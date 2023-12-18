@@ -8,7 +8,6 @@ import Stories from './Stories';
 import HeroContainer from './Hero/HeroContainer';
 import SelectTourContainer from './SelectTour/SelectTourContainer';
 import TourFormContainer from './TourForm/TourFormContainer';
-// import ReviewsContainer from './Reviews/ReviewsContainer';
 import ReviewsContainer from './Reviews/ReviewsContainer';
 
 import TravelPhotoContainer from './TravelPhoto/TravelPhotoContainer';

@@ -1,9 +1,8 @@
 import React, { memo } from 'react';
 import Link from 'next/link';
+import BtnSec from 'components/BtnSec';
 
 import s from './CardBig.module.scss';
-
-import BtnSec from '../BtnSec';
 
 const CardBig = memo(({ img, title, subtitle, subtitbleList, socials }) => {
   return (

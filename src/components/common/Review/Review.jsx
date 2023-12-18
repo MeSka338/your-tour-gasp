@@ -1,7 +1,7 @@
 import React, { memo, useEffect } from 'react';
 import Link from 'next/link';
+import ModalReviewContainer from 'components/ModalReview/ModalReviewContainer';
 import s from './Review.module.scss';
-import ModalReviewContainer from '../ModalReview/ModalReviewContainer';
 
 const Review = memo(
   ({ text, name, tourType, profileImg, textRef, isModal, setIsModal }) => {
