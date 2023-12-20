@@ -4,11 +4,11 @@ import SelectTour from './SelectTour';
 
 const SelectTourContainer = memo(({ selectTourRef }) => {
   const [menuArr, setMenuArr] = useState([
-    { title: 'Популярные', isSelect: true },
-    { title: 'Авторские', isSelect: false },
-    { title: 'Походы', isSelect: false },
-    { title: 'Сплавы', isSelect: false },
-    { title: 'Велопрогулки', isSelect: false },
+    { id: 1, title: 'Популярные', isSelect: true },
+    { id: 2, title: 'Авторские', isSelect: false },
+    { id: 3, title: 'Походы', isSelect: false },
+    { id: 4, title: 'Сплавы', isSelect: false },
+    { id: 5, title: 'Велопрогулки', isSelect: false },
   ]);
 
   const tourTitleRef = useRef();

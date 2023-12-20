@@ -46,7 +46,7 @@ const SelectTour = memo(
             return (
               <li
                 className={s.selectTourMenuItem}
-                key={item.key}
+                key={item.id}
               >
                 <a
                   className={
