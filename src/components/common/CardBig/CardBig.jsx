@@ -31,7 +31,7 @@ const CardBig = memo(({ img, title, subtitle, subtitbleList, socials }) => {
                 return (
                   <Link
                     href="/"
-                    key={item}
+                    key={item.id}
                     className={s.socialsItem}
                   >
                     {item}

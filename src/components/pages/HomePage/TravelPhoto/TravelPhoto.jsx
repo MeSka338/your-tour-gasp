@@ -1,6 +1,8 @@
 import React, { memo, useEffect } from 'react';
-import Arr from 'utils/array';
+// import Arr from 'utils/array';
 import SectionTitleContainer from 'components/SectionTitle/SectionTitleContainer';
+
+import Arr from '../../../../../utils/array';
 
 import s from './TravelPhoto.module.scss';
 

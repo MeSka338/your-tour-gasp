@@ -17,7 +17,7 @@ const Stories = memo(({ storiesRef }) => {
       {storiesData.map(item => {
         return (
           <CardBig
-            key={item}
+            key={item.id}
             img={item.img}
             title={item.title}
             subtitle={item.subtitle}

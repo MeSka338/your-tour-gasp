@@ -31,7 +31,8 @@ const ReviewContainer = memo(({ text, name, tourType, profileImg }) => {
 
   useEffect(() => {
     reviewAnimation();
-  }, [reviewAnimation]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <Review

@@ -22,7 +22,7 @@ const Reviews = memo(({ reviewsRef, modalAnimation, modalRef }) => (
     <div className={s.reviewWrapper}>
       {reviewData.map(item => (
         <ReviewContainer
-          key={item}
+          key={item.id}
           text={item.text}
           name={item.name}
           tourType={item.tourType}

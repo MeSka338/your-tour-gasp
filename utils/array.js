@@ -1,5 +1,5 @@
 function Arr(length, head) {
-  const arr = Array.from({ length: length }).map((_, idx) => idx + head);
+  const arr = Array.from({ length }).map((_, idx) => idx + head);
   return arr;
 }
 

@@ -2,7 +2,8 @@ import React, { useEffect, memo } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import Card from 'components/Card';
-import Arr from 'utils/array';
+// import Arr from 'utils/array';
+import Arr from '../../../../../utils/array';
 
 import s from './SelectTour.module.scss';
 
@@ -45,7 +46,7 @@ const SelectTour = memo(
             return (
               <li
                 className={s.selectTourMenuItem}
-                key={item}
+                key={item.key}
               >
                 <a
                   className={
