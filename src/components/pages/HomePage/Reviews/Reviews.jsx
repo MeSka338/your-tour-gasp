@@ -1,6 +1,7 @@
 import React, { memo } from 'react';
 
 import reviewData from 'constants/reviewData';
+
 import SectionTitleContainer from 'components/SectionTitle/SectionTitleContainer';
 import ReviewContainer from 'components/Review/ReviewContainer';
 
